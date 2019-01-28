@@ -1,3 +1,6 @@
+# Macintosh-specific goofy file
+.DS_Store
+
 # Data files, which are large
 datasets/*
 
