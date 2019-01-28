@@ -1,0 +1,1131 @@
+
+Bibliographic reports
+======================
+  This is a small set of reports applied against the bibliographics
+  database. Their primary purpose is two-fold: 1) to give the reader
+  an idea of what is in the database, and 2) give the reader a set
+  of sample SQL statements for study & use. --Eric Lease Morgan
+  <emorgan@nd.edu>, January 27, 2019.
+
+List the database's structure
+-----------------------------
+CREATE TABLE bibliographics(
+  "docid" TEXT,
+  "htid" TEXT,
+  "author" TEXT,
+  "firstname" TEXT,
+  "inferreddate" TEXT,
+  "birthdate" TEXT,
+  "authgender" TEXT,
+  "enumcron" TEXT,
+  "title" TEXT
+);
+
+Number of records in the database
+---------------------------------
+95486
+
+Number of distict author values (names)
+---------------------------------------
+41175
+
+Counts & tabulations of the 50 most frequent author names
+---------------------------------------------------------
+5867	
+203	Scott, Walter,
+192	Conrad, Joseph,
+161	James, G. P. R.
+156	Oliphant,
+152	Lytton, Edward Bulwer Lytton,
+151	Balzac, Honoré de,
+146	Cooper, James Fenimore,
+130	Dickens, Charles,
+127	Braddon, M. E.
+126	Defoe, Daniel,
+113	Gore,
+111	Dumas, Alexandre,
+109	Simenon, Georges,
+109	Thackeray, William Makepeace,
+103	Galsworthy, John,
+94	Ouida,
+92	Edgeworth, Maria,
+92	Lever, Charles James,
+91	Phillpotts, Eden,
+76	(Herbert George), Wells, H. G.
+76	Wood, Henry,
+74	Black, William,
+73	Lawrence, D. H. (David Herbert),
+71	Henty, G. A.
+67	Besant, Walter,
+67	Kipling, Rudyard,
+65	Ainsworth, William Harrison,
+65	Hugo, Victor,
+63	Harte, Bret,
+63	Marryat, Frederick,
+62	Arthur, T. S.
+62	Bates, H. E. (Herbert Ernest),
+61	Yonge, Charlotte M.
+59	Bennett, Arnold,
+59	Grey, Zane,
+57	Collins, Wilkie,
+57	Tarkington, Booth,
+56	Faulkner, William,
+56	Maugham, W. Somerset (William Somerset),
+55	Greene, Graham,
+55	Martineau, Harriet,
+55	Trollope, Anthony,
+55	Trollope, Frances Milton,
+54	Eliot, George,
+54	Grant, James,
+54	Oates, Joyce Carol,
+53	Smart, Hawley,
+52	Barr, Amelia Edith Huddleston,
+52	Duchess,
+
+Counts & tabulations of author names similar to 'Scott, Walter'
+---------------------------------------------------------------
+203	Scott, Walter,
+3	Scott, Walter
+
+Counts & tabulations of author names similar to 'James, G. P. R'
+----------------------------------------------------------------
+161	James, G. P. R.
+2	James, G. P. R. (George Payne Rainsford),
+1	James, G. P. R.,
+
+Counts & tabulations of author names similar to 'Bates, H. E'
+-------------------------------------------------------------
+62	Bates, H. E. (Herbert Ernest),
+2	(Herbert Ernest), Bates, H. E.
+
+Counts & tabulations of author names similar to 'Eliot, George'
+----------------------------------------------------------------
+54	Eliot, George,
+1	Eliot, George Fielding,
+
+Counts & tabulations of birth dates
+-----------------------------------
+32369	
+1109	1964.0
+1084	1957.0
+1073	1966.0
+1068	1965.0
+1054	1960.0
+1045	1967.0
+1032	1963.0
+1028	1954.0
+1021	1958.0
+1016	1956.0
+999	1955.0
+992	1959.0
+978	1949.0
+976	1951.0
+968	1950.0
+963	1961.0
+959	1953.0
+940	1962.0
+939	1952.0
+905	1948.0
+842	1968.0
+779	1947.0
+754	1929.0
+744	1938.0
+739	1945.0
+738	1926.0
+730	1905.0
+728	1930.0
+727	1928.0
+716	1940.0
+716	1946.0
+712	1941.0
+708	1939.0
+708	1942.0
+693	1934.0
+692	1943.0
+687	1903.0
+685	1925.0
+679	1927.0
+666	1935.0
+658	1944.0
+656	1912.0
+654	1937.0
+649	1923.0
+641	1936.0
+640	1933.0
+635	1920.0
+625	1924.0
+619	1907.0
+616	1931.0
+610	1914.0
+602	1932.0
+601	1904.0
+584	1908.0
+562	1906.0
+557	1922.0
+554	1917.0
+551	1899.0
+547	1890.0
+546	1894.0
+543	1913.0
+543	1916.0
+540	1919.0
+537	1911.0
+532	1896.0
+532	1921.0
+524	1915.0
+513	1897.0
+505	1895.0
+496	1969.0
+494	1892.0
+493	1885.0
+488	1902.0
+482	1910.0
+476	1909.0
+451	1918.0
+426	1888.0
+424	1889.0
+420	1893.0
+418	1898.0
+411	1900.0
+384	1884.0
+382	1901.0
+373	1891.0
+342	1887.0
+326	1883.0
+286	1886.0
+278	1881.0
+251	1857.0
+237	1873.0
+225	1882.0
+216	1880.0
+211	1878.0
+206	1879.0
+201	1867.0
+190	1862.0
+184	1874.0
+170	1866.0
+159	1875.0
+149	0.0
+140	1871.0
+128	1872.0
+123	1869.0
+116	1863.0
+116	1870.0
+116	1877.0
+115	1876.0
+101	1865.0
+94	1868.0
+66	1864.0
+64	1859.0
+58	1860.0
+50	1856.0
+37	1858.0
+31	1861.0
+23	1855.0
+17	1970.0
+2	1971.0
+1	18721968.0
+1	1973.0
+1	1976.0
+
+Counts & tabulations of author genders
+--------------------------------------
+51081	m
+26929	f
+17476	u
+
+Counts & tabulations of 25 most prolific female authors born before 1800
+------------------------------------------------------------------------
+156	Oliphant,
+127	Braddon, M. E.
+113	Gore,
+94	
+94	Ouida,
+92	Edgeworth, Maria,
+75	Wood, Henry,
+68	Balzac, Honoré de,
+61	Yonge, Charlotte M.
+55	Martineau, Harriet,
+55	Trollope, Frances Milton,
+54	Eliot, George,
+52	Barr, Amelia Edith Huddleston,
+52	Duchess,
+52	Marryat, Florence,
+51	Burnett, Frances Hodgson,
+51	Norris, W. E.
+47	Craik, Dinah Maria Mulock,
+47	Sherwood,
+45	Marsh-Caldwell, Anne,
+45	Riddell, J. H.,
+43	Tabor, Eliza.
+35	Atherton, Gertrude Franklin Horn,
+34	Southworth, Emma Dorothy Eliza Nevitte,
+33	Carey, Rosa Nouchette,
+
+Number of distinct titles
+-------------------------
+85408
+
+Counts & tabulations of the 50 most frequent titles
+---------------------------------------------------
+66	Works.
+51	Works
+47	The New British novelist;
+45	The Shakespeare Head edition of the novels and selected writings of Daniel Defoe.
+45	The Waverley novels
+43	The works of H. G. Wells.
+35	Men of good will / | $c: by Jules Romains.
+34	[Works]
+33	Widecombe edition of Eden Phillpotts's Dartmoor novels in twenty volumes / | $c: by Eden Phillpotts ; with an introd. by Arnold Bennett.
+33	[Complete works.
+32	Complete works / | $c: Joseph Conrad.
+32	Dumas' Romances
+32	Novels of Sir Edward Bulwer Lytton
+31	Cooper's novels
+28	Tales and novels
+28	The book of the thousand nights and one night : | rendered  from the literal and complete version of Dr. J. C. Mardrus and collated with other sources / | $c: by E. Powys Mathers ; private print for subscribers.
+27	Complete works.
+27	La comédie humaine of Honoré de Balzac;
+26	The works of Charles Dickens
+26	The works of William Makepeace Thackeray
+25	The writings of Mark Twain [pseud.]
+25	Waverley novels
+24	The novels of Captain Marryat
+24	[Charles Lever's novels
+24	[Novels]
+23	The works of Gilbert Parker.
+22	[Cooper's works]
+22	[Scott's novels]
+21	The works of G.P.R. James, esq
+21	The works of George Eliot
+21	The works of Joseph Conrad.
+20	Illustrations of political economy
+19	Novels
+19	[Romances]
+18	Eden Phillpotts's Dartmoor novels ... / | $c: [with an introduction by Arnold Bennett.
+18	The collected edition.
+17	Complete short stories.
+17	Complete works of Joseph Conrad.
+17	Dickens' works
+17	Tales from  Blackwood.
+17	The writings of Charles Dickens
+16	Comedy of human life
+16	The novels of Balzac
+16	The works of John Galsworthy.
+15	Romances and narratives
+15	The novels and tales of Robert Louis Stevenson
+15	Yuvakatha : | unforgettable short fiction from some of India's master story tellers / | $c: edited by Geeta Dharmarajan.
+14	Memoirs on the Coleoptera / | $c: by Thos. L. Casey.
+14	Tales
+14	Tales of my landlord
+
+List authors & titles for a given work (Cooper's novels)
+---------------------------------------------------
+Cooper, James Fenimore,	Cooper's novels	v. 14 Miles Wallingford	1859
+Cooper, James Fenimore,	Cooper's novels	v. 17 The Prairie	1859
+Cooper, James Fenimore,	Cooper's novels	v. 2 The Bravo	1859
+Cooper, James Fenimore,	Cooper's novels	v. 23	1859
+Cooper, James Fenimore,	Cooper's novels	v. 24	1859
+Cooper, James Fenimore,	Cooper's novels	v. 25	1859
+Cooper, James Fenimore,	Cooper's novels	v. 26	1859
+Cooper, James Fenimore,	Cooper's novels	v. 3 the chainbearer	1859
+Cooper, James Fenimore,	Cooper's novels	v. 31	1859
+Cooper, James Fenimore,	Cooper's novels	v. 32	1859
+Cooper, James Fenimore,	Cooper's novels	v. 4 The Crater	1859
+Cooper, James Fenimore,	Cooper's novels	v. 6 The Headsman	1859
+Cooper, James Fenimore,	Cooper's novels	v. 7 The Heidenmauer	1859
+Cooper, James Fenimore,	Cooper's novels	v. 8 (Home as Found)	1859
+Cooper, James Fenimore,	Cooper's novels	v.1	1852
+Cooper, James Fenimore,	Cooper's novels	v.10	1852
+Cooper, James Fenimore,	Cooper's novels	v.12	1852
+Cooper, James Fenimore,	Cooper's novels	v.13	1852
+Cooper, James Fenimore,	Cooper's novels	v.15	1852
+Cooper, James Fenimore,	Cooper's novels	v.16	1852
+Cooper, James Fenimore,	Cooper's novels	v.18	1852
+Cooper, James Fenimore,	Cooper's novels	v.19	1852
+Cooper, James Fenimore,	Cooper's novels	v.20	1852
+Cooper, James Fenimore,	Cooper's novels	v.21	1852
+Cooper, James Fenimore,	Cooper's novels	v.22	1852
+Cooper, James Fenimore,	Cooper's novels	v.27	1852
+Cooper, James Fenimore,	Cooper's novels	v.28	1852
+Cooper, James Fenimore,	Cooper's novels	v.29	1852
+Cooper, James Fenimore,	Cooper's novels	v.30	1852
+Cooper, James Fenimore,	Cooper's novels	v.5	1852
+Cooper, James Fenimore,	Cooper's novels	v.9	1852
+
+All dates (years)
+-----------------
+1703
+1708
+1715
+1719
+1722
+1725
+1726
+1727
+1728
+1732
+1733
+1735
+1736
+1739
+1740
+1741
+1742
+1743
+1744
+1748
+1749
+1750
+1751
+1752
+1753
+1754
+1755
+1756
+1758
+1759
+1760
+1761
+1762
+1763
+1764
+1765
+1766
+1767
+1768
+1769
+1770
+1771
+1772
+1773
+1774
+1775
+1777
+1779
+1780
+1781
+1782
+1783
+1784
+1785
+1786
+1787
+1788
+1789
+1790
+1791
+1792
+1793
+1794
+1795
+1796
+1797
+1798
+1799
+1800
+1801
+1802
+1803
+1804
+1805
+1806
+1807
+1808
+1809
+1810
+1811
+1812
+1813
+1814
+1815
+1816
+1817
+1818
+1819
+1820
+1821
+1822
+1823
+1824
+1825
+1826
+1827
+1828
+1829
+1830
+1831
+1832
+1833
+1834
+1835
+1836
+1837
+1838
+1839
+1840
+1841
+1842
+1843
+1844
+1845
+1846
+1847
+1848
+1849
+1850
+1851
+1852
+1853
+1854
+1855
+1856
+1857
+1858
+1859
+1860
+1861
+1862
+1863
+1864
+1865
+1866
+1867
+1868
+1869
+1870
+1871
+1872
+1873
+1874
+1875
+1876
+1877
+1878
+1879
+1880
+1881
+1882
+1883
+1884
+1885
+1886
+1887
+1888
+1889
+1890
+1891
+1892
+1893
+1894
+1895
+1896
+1897
+1898
+1899
+1900
+1901
+1902
+1903
+1904
+1905
+1906
+1907
+1908
+1909
+1910
+1911
+1912
+1913
+1914
+1915
+1916
+1917
+1918
+1919
+1920
+1921
+1922
+1923
+1924
+1925
+1926
+1927
+1928
+1929
+1930
+1931
+1932
+1933
+1934
+1935
+1936
+1937
+1938
+1939
+1940
+1941
+1942
+1943
+1944
+1945
+1946
+1947
+1948
+1949
+1950
+1951
+1952
+1953
+1954
+1955
+1956
+1957
+1958
+1959
+1960
+1961
+1962
+1963
+1964
+1965
+1966
+1967
+1968
+1969
+1970
+1971
+1972
+1973
+1974
+1975
+1976
+1977
+1978
+1979
+1980
+1981
+1982
+1983
+1984
+1985
+1986
+1987
+1988
+1989
+1990
+1991
+1992
+1993
+1994
+1995
+1996
+1997
+1998
+1999
+2000
+2001
+2002
+2003
+2004
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2013
+
+Count & tabulate all dates (years)
+----------------------------------
+1130	2004
+1116	1997
+1082	2005
+1082	2006
+1079	2000
+1061	1994
+1054	2007
+1051	2003
+1048	1989
+1048	1998
+1046	1990
+1046	1996
+1040	1995
+1034	1991
+1023	1999
+1013	1993
+989	2001
+977	1992
+974	1988
+962	2002
+883	1968
+855	1969
+854	1970
+849	2008
+837	1987
+818	1978
+811	1979
+809	1967
+807	1922
+805	1966
+802	1985
+798	1980
+777	1974
+773	1986
+769	1984
+766	1981
+763	1983
+760	1982
+758	1975
+757	1977
+752	1973
+749	1976
+733	1965
+721	1963
+715	1920
+713	1964
+700	1913
+695	1971
+690	1960
+684	1961
+678	1899
+668	1912
+665	1954
+660	1962
+658	1921
+656	1955
+635	1957
+635	1959
+631	1956
+630	1896
+628	1972
+618	1919
+616	1911
+607	1952
+604	1947
+604	1951
+604	1958
+600	1929
+598	1910
+595	1930
+590	1953
+588	1914
+584	1893
+583	1946
+581	1950
+580	1917
+574	1915
+572	1895
+560	1894
+560	1916
+560	1928
+560	1935
+555	1927
+546	1918
+542	1908
+537	1898
+528	1892
+524	1923
+514	1909
+504	1931
+504	1937
+499	2009
+494	1949
+493	1948
+490	1925
+478	1897
+478	1907
+470	1924
+467	1906
+462	1934
+461	1926
+460	1933
+457	1936
+456	1932
+450	1890
+445	1901
+445	1903
+441	1891
+439	1945
+437	1938
+425	1888
+424	1904
+420	1943
+397	1900
+396	1944
+393	1942
+390	1905
+389	1889
+379	1940
+374	1886
+372	1887
+371	1883
+366	1941
+364	1902
+343	1884
+329	1939
+295	1885
+294	1882
+279	1880
+276	1876
+272	1881
+258	1878
+248	1877
+243	1865
+243	1872
+235	1867
+234	1868
+230	1857
+230	1875
+229	1866
+228	1864
+224	1874
+222	1871
+221	1873
+221	1879
+205	1852
+204	1860
+201	1870
+195	1856
+191	1859
+182	1869
+179	1863
+174	1854
+173	1829
+172	1830
+172	1858
+171	1855
+170	1844
+165	1835
+160	1853
+158	1840
+142	1832
+140	1850
+139	1845
+138	1825
+137	1849
+134	1841
+132	1846
+131	1834
+131	1848
+130	1833
+130	1851
+129	1839
+128	1836
+128	1842
+126	1837
+124	1862
+122	1847
+114	1827
+110	1843
+110	1861
+109	1831
+103	1826
+101	1838
+91	1823
+87	1824
+85	1828
+78	1821
+73	1822
+63	1810
+61	1820
+60	1815
+60	1818
+59	1811
+58	1812
+53	1814
+50	1817
+48	1816
+46	1801
+46	1807
+46	1819
+43	1808
+43	1809
+41	1813
+37	1804
+36	1806
+31	1803
+25	1799
+24	1796
+24	1800
+23	1798
+20	1784
+19	1795
+19	1805
+17	1792
+17	1802
+16	1791
+16	2010
+14	1794
+13	1787
+13	1797
+12	1793
+11	1751
+11	1785
+10	1786
+10	1789
+9	1749
+9	1781
+8	1736
+8	1772
+8	1774
+6	1752
+6	1761
+6	1777
+6	1788
+5	1703
+5	1722
+5	1727
+5	1741
+5	1753
+5	1762
+5	1769
+5	1770
+5	1790
+4	1726
+4	1739
+4	1759
+4	1764
+4	1771
+4	1780
+3	1760
+3	1763
+3	1768
+3	1779
+3	1783
+2	1708
+2	1715
+2	1719
+2	1740
+2	1743
+2	1748
+2	1758
+2	1765
+2	1766
+2	1767
+2	1773
+1	1725
+1	1728
+1	1732
+1	1733
+1	1735
+1	1742
+1	1744
+1	1750
+1	1754
+1	1755
+1	1756
+1	1775
+1	1782
+1	2011
+1	2013
+
+List 25 (random) HathiTrust identifiers
+---------------------------------------
+njp.32101073308833
+mdp.39015016795497
+inu.39000005915231
+nyp.33433075766588
+uc1.b3327544
+uiuo.ark+=13960=t02z1vk3v
+uc1.$b301148
+mdp.39015023584199
+uc1.$b102961
+uc1.b4951578
+mdp.39015051166406
+uc2.ark+=13960=t3kw5dj4t
+uc1.b3176181
+mdp.39015032471420
+mdp.39015000874175
+uc1.b4931117
+mdp.39015074064331
+mdp.39015059204845
+mdp.39015020755057
+mdp.49015001003277
+nyp.33433074808522
+uc2.ark+=13960=t11n84h67
+uc1.b4097861
+mdp.39015014503323
+inu.39000002910078
+
+List 25 random links from the 'Trust items dated prior to 1923
+--------------------------------------------------------------
+  * http://hdl.handle.net/2027/mdp.39015063753670
+  * http://hdl.handle.net/2027/nc01.ark+=13960=t02z1n29j
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t81j99760
+  * http://hdl.handle.net/2027/mdp.39015059410772
+  * http://hdl.handle.net/2027/mdp.39015063946787
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t4sj1c69h
+  * http://hdl.handle.net/2027/nnc1.cu58312390
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t8sb3zp7n
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t3jw89b37
+  * http://hdl.handle.net/2027/njp.32101068598612
+  * http://hdl.handle.net/2027/njp.32101067627594
+  * http://hdl.handle.net/2027/mdp.39015063927084
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t8z89jk5h
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t21c1w665
+  * http://hdl.handle.net/2027/uc1.b111905
+  * http://hdl.handle.net/2027/nyp.33433076074081
+  * http://hdl.handle.net/2027/inu.30000003786799
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t1bk1r34s
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t9k365v7h
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t14m9rx42
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t3mw2f73w
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t6c24sp9w
+  * http://hdl.handle.net/2027/nyp.33433074820022
+  * http://hdl.handle.net/2027/nyp.33433074870191
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t6sx6jk7s
+
+Count & tabulate all the items from each library
+------------------------------------------------
+38090	mdp
+22132	uc1
+8566	nyp
+6600	uc2
+4700	inu
+3859	uiuo
+3120	pst
+2507	njp
+1523	wu
+848	osu
+672	loc
+549	hvd
+539	uva
+383	nnc1
+357	umn
+313	nc01
+236	dul1
+227	coo
+74	miun
+51	uiug
+46	yale
+18	aeu
+18	ien
+15	miua
+9	yul
+8	ucm
+7	bc
+5	iau
+4	ucw
+3	coo1
+3	uma
+1	chi
+1	gri
+1	ncs1
+1	nnc2
+
+Count & tabulate all the items from each library dated prior to 1923
+--------------------------------------------------------------------
+8556	nyp
+6591	uc2
+4759	mdp
+3840	uiuo
+2461	njp
+2347	uc1
+708	wu
+672	loc
+544	hvd
+539	uva
+387	inu
+382	nnc1
+310	nc01
+235	dul1
+82	umn
+75	coo
+52	pst
+46	yale
+18	uiug
+13	ien
+8	ucm
+6	bc
+6	miun
+3	osu
+2	coo1
+2	miua
+1	ncs1
+1	ucw
+
+A bibliography of Anthony Trollope
+----------------------------------
+  Number of titles: 55
+
+  * An editor's tales (v.12) in 1881 <http://hdl.handle.net/2027/inu.32000013013364>
+  * An eye for an eye (v.14) in 1881 <http://hdl.handle.net/2027/inu.32000009367923>
+  * An old man's love (v.1) in 1884 <http://hdl.handle.net/2027/mdp.39015047747947>
+  * An old man's love (v.2) in 1884 <http://hdl.handle.net/2027/mdp.39015047748093>
+  * Ayala's angel (v.2) in 1882 <http://hdl.handle.net/2027/inu.32000013013232>
+  * Barchester towers (v.1) in 1859 <http://hdl.handle.net/2027/njp.32101017731553>
+  * Barchester towers (v.2) in 1859 <http://hdl.handle.net/2027/njp.32101013826951>
+  * Castle Richmond () in 1860 <http://hdl.handle.net/2027/njp.32101067178937>
+  * Christmas at Thompson Hall; () in 1894 <http://hdl.handle.net/2027/mdp.39015005917128>
+  * Claverings (vol.2) in 1867 <http://hdl.handle.net/2027/njp.32101067178945>
+  * Cousin Henry (v.8) in 1881 <http://hdl.handle.net/2027/inu.32000009367949>
+  * Doctor Thorne () in 1858 <http://hdl.handle.net/2027/njp.32101067178986>
+  * Framley parsonage (v.16) in 1882 <http://hdl.handle.net/2027/inu.32000009368053>
+  * Frau Frohmann and other stories () in 1892 <http://hdl.handle.net/2027/njp.32101067179018>
+  * Harry Heathcote of Gangoil () in 1874 <http://hdl.handle.net/2027/uc1.b4104233>
+  * He knew he was right () in 1869 <http://hdl.handle.net/2027/njp.32101067179059>
+  * Kept in the dark (v.23) in 1883 <http://hdl.handle.net/2027/inu.32000013013281>
+  * La mère Bauche () in 1883 <http://hdl.handle.net/2027/uc1.$b441029>
+  * Lady Anna (v.1) in 1873 <http://hdl.handle.net/2027/njp.32101067179091>
+  * Lady Anna (v.2) in 1873 <http://hdl.handle.net/2027/njp.32101067179109>
+  * Lady Anna (v.24) in 1874 <http://hdl.handle.net/2027/inu.32000009367980>
+  * Marion Fay (v.29) in 1883 <http://hdl.handle.net/2027/inu.32000009368038>
+  * Miss Mackenzie () in 1876 <http://hdl.handle.net/2027/mdp.39015065597299>
+  * Nina Balatka; () in 1867 <http://hdl.handle.net/2027/mdp.39015005889996>
+  * Phineas Redux (v. 2) in 1893 <http://hdl.handle.net/2027/nyp.33433075758627>
+  * Phineas Redux (v. 3) in 1893 <http://hdl.handle.net/2027/nyp.33433075758635>
+  * Phineas Redux (v.4 PT.2) in 1893 <http://hdl.handle.net/2027/uva.x000537584>
+  * Phineas Redux (v.4 PT.3) in 1893 <http://hdl.handle.net/2027/uva.x000441283>
+  * Rachel Ray (v.1) in 1863 <http://hdl.handle.net/2027/mdp.39015002649047>
+  * Rachel Ray (v.2) in 1863 <http://hdl.handle.net/2027/mdp.39015002649252>
+  * Rachel Ray (v.35) in 1880 <http://hdl.handle.net/2027/inu.32000009368046>
+  * Sir Harry Hotspur of Humblethwaite (v.37) in 1877 <http://hdl.handle.net/2027/inu.32000013013240>
+  * Tales of all countries () in 1867 <http://hdl.handle.net/2027/uc1.b4105552>
+  * The American senator () in 1877 <http://hdl.handle.net/2027/njp.32101067178903>
+  * The Belton estate () in 1866 <http://hdl.handle.net/2027/nyp.33433075762694>
+  * The Kellys and the O'Kellys (v.22) in 1880 <http://hdl.handle.net/2027/inu.32000013013406>
+  * The Macdermots of Ballycloran (v.28) in 1880 <http://hdl.handle.net/2027/inu.32000009367931>
+  * The chronicles of Barsetshire (v.1 1891) in 1891 <http://hdl.handle.net/2027/mdp.39015065597083>
+  * The chronicles of Barsetshire (v.2 1891) in 1891 <http://hdl.handle.net/2027/mdp.39015065597075>
+  * The chronicles of Barsetshire (v.3 1893) in 1891 <http://hdl.handle.net/2027/mdp.39015065597067>
+  * The chronicles of Barsetshire (v.4) in 1887 <http://hdl.handle.net/2027/nnc1.0022269789>
+  * The chronicles of Barsetshire (v.4 1894) in 1891 <http://hdl.handle.net/2027/mdp.39015065597059>
+  * The chronicles of Barsetshire (v.5 1889) in 1891 <http://hdl.handle.net/2027/mdp.39015065597042>
+  * The chronicles of Barsetshire (v.6) in 1887 <http://hdl.handle.net/2027/nnc1.0030180970>
+  * The chronicles of Barsetshire (v.6 1889) in 1891 <http://hdl.handle.net/2027/mdp.39015065597034>
+  * The chronicles of Barsetshire (v.7 1893) in 1891 <http://hdl.handle.net/2027/mdp.39015065597026>
+  * The chronicles of Barsetshire (v.8 1893) in 1891 <http://hdl.handle.net/2027/mdp.39015065596853>
+  * The duke's children (v.11) in 1881 <http://hdl.handle.net/2027/inu.30000005353572>
+  * The golden lion of granpere () in 1872 <http://hdl.handle.net/2027/nyp.33433084128317>
+  * The last chronicle of Barset (v.25) in 1879 <http://hdl.handle.net/2027/inu.32000013013463>
+  * The last chronicle of Barset (v.26) in 1879 <http://hdl.handle.net/2027/inu.32000013013398>
+  * The three clerks () in 1860 <http://hdl.handle.net/2027/uc1.b4103265>
+  * The vicar of Bullhampton (v.1-2) in 1870 <http://hdl.handle.net/2027/mdp.39015065597547>
+  * The warden (v.41) in 1894 <http://hdl.handle.net/2027/inu.30000005351618>
+  * The way we live now (v.42) in 1895 <http://hdl.handle.net/2027/inu.32000013013430>
+
+Public domain works by female authors born in the 19th Century
+--------------------------------------------------------------
+  Number of titles: 9
+
+  * Miss Tiverton goes out / | $c: Anonymous [i.e. A. Champneys] by Champneys, A. M. (Adelaide Mary) (1920) <http://hdl.handle.net/2027/uc2.ark:/13960/t3kw59446>
+
+  * The Winston companion readers ... / | $c: by Ethel H. Maltby and Sidney G. Firman ; illustrated by Frederick Richardson. by Gehres, Ethel Maltby, (1922) <http://hdl.handle.net/2027/uiug.30112081774983>
+
+  * Redgold : | a true story of an Englishwoman's development in the West / | $c: by Charlotte Gordon. by Gordon, Charlotte. (1920) <http://hdl.handle.net/2027/wu.89098861958>
+
+  * The Valley of Never-Come-Back, | and other stories, | $c: by Beatrice Grimshaw. by Grimshaw, Beatrice Ethel. (1920) <http://hdl.handle.net/2027/uc2.ark:/13960/t7sn03v4s>
+
+  * Stories of New York state, | $c: by M. Frances Logan ... by Logan, M. Frances. (1920) <http://hdl.handle.net/2027/nyp.33433062498799>
+
+  * Harriet and the piper ... by Norris, Kathleen Thompson, (1920) <http://hdl.handle.net/2027/mdp.39015063936705>
+
+  * Tissue paper patterns; | dress development; designing with foundation patterns; cutting and fitting; dress construction and finishing dresses; ribbon trimmings and flowers, | $c: by Mary Brooks Picken. by Picken, Mary Brooks, (1916) <http://hdl.handle.net/2027/uc1.31158000135391>
+
+  * The rector of Wyck / | $c: by May Sinclair. by Sinclair, May. (1920) <http://hdl.handle.net/2027/mdp.39015030711918>
+
+  * Minstrel tales / | $c: by M. Sturt and E. C. Oakden. by Sturt, Mary. (1920) <http://hdl.handle.net/2027/njp.32101054957087>
+
+
