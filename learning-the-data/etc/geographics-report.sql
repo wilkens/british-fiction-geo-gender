@@ -79,5 +79,48 @@ SELECT "---------------------------------------------------------------------";
 SELECT COUNT( point_of_interest ) AS c, point_of_interest FROM geographics GROUP BY point_of_interest ORDER BY c DESC LIMIT 50;
 SELECT '';
 
+SELECT "Count & tabulate the 50 most genre";
+SELECT "----------------------------------";
+SELECT COUNT( genre ) AS c, genre FROM geographics GROUP BY genre ORDER BY c DESC LIMIT 50;
+SELECT '';
 
+SELECT "Count & tabulate the 50 most genders";
+SELECT "------------------------------------";
+SELECT COUNT( gender ) AS c, gender FROM geographics GROUP BY gender ORDER BY c DESC LIMIT 50;
+SELECT '';
+
+SELECT "Count & tabulate the 50 most white";
+SELECT "----------------------------------";
+SELECT COUNT( white ) AS c, white FROM geographics GROUP BY white ORDER BY c DESC LIMIT 50;
+SELECT '';
+
+SELECT "Count & tabulate the 50 publication dates";
+SELECT "-----------------------------------------";
+SELECT COUNT( pub_date ) AS c, pub_date FROM geographics GROUP BY pub_date ORDER BY c DESC LIMIT 50;
+SELECT '';
+
+SELECT "Count & tabulate the 50 most premise";
+SELECT "------------------------------------";
+SELECT COUNT( premise ) AS c, premise FROM geographics GROUP BY premise ORDER BY c DESC LIMIT 50;
+SELECT '';
+
+SELECT "Count & tabulate the 50 most frequently mentioned museums or libraries";
+SELECT "----------------------------------------------------------------------";
+SELECT COUNT( formatted_address ) AS c, formatted_address FROM geographics
+WHERE location_type IS 'library' OR location_type IS 'museum'
+GROUP BY formatted_address ORDER BY c DESC LIMIT 50;
+SELECT '';
+
+SELECT "Count & tabulate the 50 most frequently mentioned cities";
+SELECT "--------------------------------------------------------";
+SELECT COUNT( formatted_address ) AS c, formatted_address FROM geographics
+WHERE location_type IS 'locality' GROUP BY formatted_address ORDER BY c DESC LIMIT 50;
+SELECT '';
+
+SELECT "Count & tabulate the 50 most frequently mentioned museums or libraries in London";
+SELECT "--------------------------------------------------------------------------------";
+SELECT COUNT( formatted_address ) AS c, formatted_address FROM geographics
+WHERE locality IS 'London' AND ( location_type IS 'museum' OR location_type IS 'library' )
+GROUP BY formatted_address ORDER BY c DESC LIMIT 50;
+SELECT '';
 
