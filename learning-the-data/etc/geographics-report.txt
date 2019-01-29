@@ -71,6 +71,59 @@ Roughly speaking, the number of mentioned places per document
 -------------------------------------------------------------
 303
 
+Count & tabulate the 50 most frequently alluded to location types
+-----------------------------------------------------------------
+1414981	locality
+549254	country
+339564	point_of_interest
+289839	natural_feature
+241435	administrative_area_level_1
+202987	route
+87576	administrative_area_level_2
+87215	colloquial_area
+78016	neighborhood
+67086	restaurant
+64989	continent
+63504	university
+61302	bar
+56819	school
+56228	park
+45005	store
+40169	establishment
+39970	lodging
+36496	church
+31596	sublocality_level_1
+30195	doctor
+29546	administrative_area_level_3
+23640	clothing_store
+22381	museum
+20181	food
+18197	health
+16796	premise
+14099	lawyer
+12225	general_contractor
+11996	administrative_area_level_4
+11456	real_estate_agency
+11051	night_club
+10950	train_station
+10632	home_goods_store
+10599	hospital
+10365	library
+9930	local_government_office
+8636	finance
+7808	art_gallery
+7632	travel_agency
+7107	insurance_agency
+7058	atm
+6946	furniture_store
+6789	shopping_mall
+6670	cafe
+6647	subway_station
+6540	accounting
+6374	movie_theater
+6361	beauty_salon
+5886	meal_takeaway
+
 Count & tabulate the 50 most frequently used place names
 --------------------------------------------------------
 76325	London, UK
@@ -275,59 +328,6 @@ Count & tabulate the 50 most frequently alluded to natural features
 859	Holy City
 785	Tigris River
 
-Count & tabulate the 50 most frequently alluded to location types
------------------------------------------------------------------
-1414981	locality
-549254	country
-339564	point_of_interest
-289839	natural_feature
-241435	administrative_area_level_1
-202987	route
-87576	administrative_area_level_2
-87215	colloquial_area
-78016	neighborhood
-67086	restaurant
-64989	continent
-63504	university
-61302	bar
-56819	school
-56228	park
-45005	store
-40169	establishment
-39970	lodging
-36496	church
-31596	sublocality_level_1
-30195	doctor
-29546	administrative_area_level_3
-23640	clothing_store
-22381	museum
-20181	food
-18197	health
-16796	premise
-14099	lawyer
-12225	general_contractor
-11996	administrative_area_level_4
-11456	real_estate_agency
-11051	night_club
-10950	train_station
-10632	home_goods_store
-10599	hospital
-10365	library
-9930	local_government_office
-8636	finance
-7808	art_gallery
-7632	travel_agency
-7107	insurance_agency
-7058	atm
-6946	furniture_store
-6789	shopping_mall
-6670	cafe
-6647	subway_station
-6540	accounting
-6374	movie_theater
-6361	beauty_salon
-5886	meal_takeaway
-
 Count & tabulate the 50 most frequently alluded to points of interest
 ---------------------------------------------------------------------
 4331054	
@@ -381,8 +381,8 @@ Count & tabulate the 50 most frequently alluded to points of interest
 5	Aloe Grove
 5	Central de Abastos
 
-Count & tabulate the 50 most genre
-----------------------------------
+Count & tabulate the genres
+---------------------------
 4257238	Fiction
 54341	Fiction-Novel
 9071	Fiction-Stories
@@ -392,8 +392,8 @@ Count & tabulate the 50 most genre
 1088	History
 614	Fiction-Unspecified
 
-Count & tabulate the 50 most genders
-------------------------------------
+Count & tabulate the genders
+----------------------------
 2774708	male
 651403	female
 506733	unknown
@@ -402,8 +402,8 @@ Count & tabulate the 50 most genders
 37489	mostly_male
 7242	androg
 
-Count & tabulate the 50 most white
-----------------------------------
+Count & tabulate the 'whiteness' of the corpus
+----------------------------------------------
 4258928	
 55838	white
 13444	Nonwhite
@@ -462,8 +462,8 @@ Count & tabulate the 50 publication dates
 26063	1920
 25594	1967
 
-Count & tabulate the 50 most premise
-------------------------------------
+Count & tabulate the 50 most frequently mentioned premise
+---------------------------------------------------------
 4279652	
 12084	The Old Schools
 4478	Place d'Armes
@@ -568,58 +568,58 @@ Count & tabulate the 50 most frequently mentioned museums or libraries
 124	Age of Sail Heritage Centre, 8334 NS-209, Port Greville, NS B0M 1T0, Canada
 123	Doctor Josephus Hall House, 226 S Jackson St, Salisbury, NC 28144, USA
 
-Count & tabulate the 50 most frequently mentioned cities
---------------------------------------------------------
-76325	London, UK
-31432	Paris, France
-24523	New York, NY, USA
-23120	Rome, Italy
-13279	Edinburgh, Edinburgh, UK
-11413	Venice, Italy
-10817	Florence, Italy
-8459	Jerusalem, Israel
-8424	Dublin, Ireland
-8135	Vienna, Austria
-7834	Berlin, Germany
-7416	Athens, Greece
-7240	Brighton, The City of Brighton and Hove, UK
-6856	Glasgow, Glasgow City, UK
-6708	Manchester, UK
-6516	Bristol, City of Bristol, UK
-6210	Brussels, Belgium
-5914	Richmond, VA, USA
-5642	Norfolk, VA, USA
-5634	Birmingham, West Midlands, UK
-5599	Liverpool, Merseyside, UK
-5394	Moscow, Russia
-5366	Los Angeles, CA, USA
-5283	Boston, MA, USA
-5201	Milan, Italy
-5033	Calais, France
-4939	Istanbul, İstanbul, Turkey
-4779	Madrid, Madrid, Spain
-4772	Marseille, France
-4636	Geneva, Switzerland
-4631	Kolkata, West Bengal 700001, India
-4483	San Francisco, CA, USA
-4471	St Petersburg, Russia
-4343	Portsmouth, Portsmouth, UK
-4319	Westminster, CO, USA
-4066	Mumbai, Maharashtra, India
-3995	Southampton, Southampton, UK
-3994	Dresden, Germany
-3958	York, PA, USA
-3898	Surrey, BC, Canada
-3881	Cairo, Cairo Governorate, Egypt
-3830	Chicago, IL, USA
-3825	Dover, DE, USA
-3787	Bordeaux, France
-3687	Exeter, Exeter, Devon, UK
-3669	Alexandria, Alexandria Governorate, Egypt
-3654	Pall Mall, TN 38577, USA
-3601	Lisbon, Portugal
-3569	Amsterdam, Netherlands
-3554	Suffolk, VA, USA
+Count & tabulate the 50 most frequently mentioned cities along with their coordinates
+-------------------------------------------------------------------------------------
+76325	London, UK (51.5073509 : -0.1277583)
+31432	Paris, France (48.856614 : 2.3522219)
+24523	New York, NY, USA (40.7127837 : -74.0059413)
+23120	Rome, Italy (41.9027835 : 12.4963655)
+13279	Edinburgh, Edinburgh, UK (55.953252 : -3.188267)
+11413	Venice, Italy (45.4408474 : 12.3155151)
+10817	Florence, Italy (43.7695604 : 11.2558136)
+8459	Jerusalem, Israel (31.768319 : 35.21371)
+8424	Dublin, Ireland (53.3498053 : -6.2603097)
+8135	Vienna, Austria (48.2081743 : 16.3738189)
+7834	Berlin, Germany (52.5200066 : 13.404954)
+7416	Athens, Greece (37.983917 : 23.7293599)
+7240	Brighton, The City of Brighton and Hove, UK (50.82253 : -0.137163)
+6856	Glasgow, Glasgow City, UK (55.864237 : -4.251806)
+6708	Manchester, UK (53.4807593 : -2.2426305)
+6516	Bristol, City of Bristol, UK (51.454513 : -2.58791)
+6210	Brussels, Belgium (50.8503396 : 4.3517103)
+5914	Richmond, VA, USA (37.5407246 : -77.4360481)
+5642	Norfolk, VA, USA (36.8507689 : -76.2858726)
+5634	Birmingham, West Midlands, UK (52.486243 : -1.890401)
+5599	Liverpool, Merseyside, UK (53.4083714 : -2.9915726)
+5394	Moscow, Russia (55.755826 : 37.6173)
+5366	Los Angeles, CA, USA (34.0522342 : -118.2436849)
+5283	Boston, MA, USA (42.3600825 : -71.0588801)
+5201	Milan, Italy (45.4654219 : 9.1859243)
+5033	Calais, France (50.95129 : 1.858686)
+4939	Istanbul, İstanbul, Turkey (41.0082376 : 28.9783589)
+4779	Madrid, Madrid, Spain (40.4167754 : -3.7037902)
+4772	Marseille, France (43.296482 : 5.36978)
+4636	Geneva, Switzerland (46.2043907 : 6.1431577)
+4631	Kolkata, West Bengal 700001, India (22.572646 : 88.363895)
+4483	San Francisco, CA, USA (37.7749295 : -122.4194155)
+4471	St Petersburg, Russia (59.9342802 : 30.3350986)
+4343	Portsmouth, Portsmouth, UK (50.8197675 : -1.0879769)
+4319	Westminster, CO, USA (39.8366528 : -105.0372046)
+4066	Mumbai, Maharashtra, India (19.0759837 : 72.8776559)
+3995	Southampton, Southampton, UK (50.9097004 : -1.4043509)
+3994	Dresden, Germany (51.0504088 : 13.7372621)
+3958	York, PA, USA (39.9625984 : -76.727745)
+3898	Surrey, BC, Canada (49.1044302 : -122.801094)
+3881	Cairo, Cairo Governorate, Egypt (30.0444196 : 31.2357116)
+3830	Chicago, IL, USA (41.8781136 : -87.6297982)
+3825	Dover, DE, USA (39.158168 : -75.5243682)
+3787	Bordeaux, France (44.837789 : -0.57918)
+3687	Exeter, Exeter, Devon, UK (50.718412 : -3.533899)
+3669	Alexandria, Alexandria Governorate, Egypt (31.2000924 : 29.9187387)
+3654	Pall Mall, TN 38577, USA (36.5506245 : -84.9677248)
+3601	Lisbon, Portugal (38.7222524 : -9.1393366)
+3569	Amsterdam, Netherlands (52.3702157 : 4.8951679)
+3554	Suffolk, VA, USA (36.7282054 : -76.5835621)
 
 Count & tabulate the 50 most frequently mentioned museums or libraries in London
 --------------------------------------------------------------------------------
