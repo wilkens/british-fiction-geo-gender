@@ -5,7 +5,7 @@ Geographics reports
   database. Their primary purpose is two-fold: 1) to give the reader
   an idea of what is in the database, and 2) give the reader a set
   of sample SQL statements for study & use. --Eric Lease Morgan
-  <emorgan@nd.edu>, January 28, 2019.
+  <emorgan@nd.edu>, January 31, 2019.
 
 List the database's structure
 -----------------------------

@@ -20,7 +20,7 @@ SELECT '  This is a small set of reports applied against the geographics';
 SELECT '  database. Their primary purpose is two-fold: 1) to give the reader';
 SELECT '  an idea of what is in the database, and 2) give the reader a set';
 SELECT '  of sample SQL statements for study & use. --Eric Lease Morgan';
-SELECT '  <emorgan@nd.edu>, January 28, 2019.';
+SELECT '  <emorgan@nd.edu>, January 31, 2019.';
 SELECT '';
 
 -- echo the database's structure
