@@ -1,3 +1,14 @@
+# Macintosh-specific goofy file --ELM
+.DS_Store
+
+# ignore large files --ELM
+learning-the-data/etc/bibliographics.db
+learning-the-data/etc/gender.csv
+learning-the-data/etc/genders.db
+learning-the-data/etc/geo.tsv
+learning-the-data/etc/geographics.db
+learning-the-data/etc/metadata.csv
+
 # Data files, which are large
 datasets/*
 
