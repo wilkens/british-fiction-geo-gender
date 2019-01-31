@@ -307,4 +307,4 @@ CREATE INDEX ON gender_results (admin_1_long);
 CREATE INDEX ON gender_results (formatted_address);
 CREATE INDEX ON gender_results (text_string);
 CREATE INDEX ON gender_results (htid);
-VACUUM ANALYZE london_results_full_publication;
+VACUUM ANALYZE gender_results;
