@@ -3,6 +3,8 @@
 
 # ignore large files --ELM
 learning-the-data/etc/bibliographics.db
+learning-the-data/etc/gender-dates.tsv
+learning-the-data/etc/gender-genders.tsv
 learning-the-data/etc/gender.csv
 learning-the-data/etc/genders.db
 learning-the-data/etc/geo.tsv
