@@ -8,7 +8,7 @@ The scripts &amp; supporting files fall into three groups. The first group is us
   * [`./bin/geo2db.sh`](./bin/geo2db.sh) - create an SQLite database (geographics.db) from geo.csv
   * [`./bin/gender2db.sh`](./bin/gender2db.sh) - create an SQLite database (genders.db) from gender.csv
 
-Be forewarned. The .csv files must exist in the ./etc directory before the .sh scripts will work. Moreover, the .sh scripts will really only work on Linux/Macintosh computers. With minor tweaking, they can work on Windows-based computers too. (Software is never done, and if it were, then it would be called "hardware".) On the other hand, the problem to solve is not really the creation of the databases as much as understanding of their content, which is the purpose of the second group.
+Be forewarned. The .csv/.tsv files must exist in the ./etc directory before the .sh scripts will work. Moreover, the .sh scripts will really only work on Linux/Macintosh computers. With minor tweaking, they can work on Windows-based computers too. (Software is never done, and if it were, then it would be called "hardware".) On the other hand, the problem to solve is not really the creation of the databases as much as understanding of their content, which is the purpose of the second group.
 
 The second group of scripts &amp; supporting files are used to query the databases. Each script is really a front-end to a set of SQL statements directed at a specific database:
 
@@ -30,7 +30,7 @@ To go above &amp; beyond students may want to peruse the SQL files used to do th
   * [`./etc/geographics-report.sql`](./etc/geographics-report.sql)
   * [`./etc/genders-report.sql`](./etc/genders-report.sql)
 
-Finally, the database files created here (bibliographics.db, geographics.db, and genders.db) are operating system independent; the database files can be read by any computer with a program called [SQLite](https://www.sqlite.org/). Even if you were not able to create the database files, somebody else was. Consider installing SQLite, obtaining the database files, and using the scripts in this distribution to learn even more.
+Finally, the databases created here (bibliographics.db, geographics.db, and genders.db) are operating system independent; the databases can be read by any computer with a program called [SQLite](https://www.sqlite.org/). Even if you were not able to create the databases yourself, somebody else was. Consider installing SQLite, obtaining the database files, and using the scripts in this distribution to learn even more.
 
 ---
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;  
