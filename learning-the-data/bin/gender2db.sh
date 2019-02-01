@@ -8,7 +8,10 @@
 # February 1, 2019 - using normalized data
 
 
-# re-initialize, do the work, and done
+# read the original (gender.csv) data, and create normalized tables from it
+./bin/gender2tables.pl > ./etc/gender-genders.tsv
+
+# delete any existing database, do the work, and done
 rm ./etc/genders.db
 cat ./etc/genders.sql | sqlite3 ./etc/genders.db
 exit
