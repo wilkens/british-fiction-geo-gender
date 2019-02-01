@@ -5,9 +5,10 @@
 
 # Eric Lease Morgan <emorgan@nd.edu>
 # January 27, 2019 - first cut
+# February 1, 2019 - using normalized data
 
 
-# change to the appropriate directory, do the work, and done
-cd ./etc
-cat gender2db.sql | sqlite3
+# re-initialize, do the work, and done
+rm ./etc/genders.db
+cat ./etc/genders.sql | sqlite3 ./etc/genders.db
 exit
