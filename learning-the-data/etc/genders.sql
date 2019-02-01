@@ -32,5 +32,8 @@ CREATE TABLE genders(
 .mode tabs
 .import ./etc/gender-dates.tsv dates
 .import ./etc/gender-genders.tsv genders
+
+-- echo the database's structure
+.schema
 .exit
 
