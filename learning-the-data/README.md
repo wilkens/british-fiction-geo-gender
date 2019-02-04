@@ -30,8 +30,14 @@ To go above &amp; beyond students may want to peruse the SQL files used to do th
   * [`./etc/geographics-report.sql`](./etc/geographics-report.sql)
   * [`./etc/genders-report.sql`](./etc/genders-report.sql)
 
-Finally, the databases created here (bibliographics.db, geographics.db, and genders.db) are operating system independent; the databases can be read by any computer with a program called [SQLite](https://www.sqlite.org/). Even if you were not able to create the databases yourself, somebody else was. Consider installing SQLite, obtaining the database files, and using the scripts in this distribution to learn even more.
+Finally, the databases created here (bibliographics.db, geographics.db, and genders.db) are operating system independent; the databases can be read by any computer with a program called [SQLite](https://www.sqlite.org/). Each of them have been saved in a repository:
+
+  * [bibliographics.db](https://osf.io/smp9b/?view_only=96827ce8db844cb4ab352f07bd5ebad0)
+  * [geographics.db](https://osf.io/exv78/?view_only=96827ce8db844cb4ab352f07bd5ebad0)
+  * [genders.db](https://osf.io/8zgm3/?view_only=96827ce8db844cb4ab352f07bd5ebad0)
+
+Even if you were not able to create the databases yourself, somebody else was. Consider installing SQLite, obtaining the database files, and using the scripts in this distribution to learn even more.
 
 ---
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;  
-February 1, 2019
+February 4, 2019

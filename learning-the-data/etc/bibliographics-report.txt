@@ -923,59 +923,59 @@ Count & tabulate all dates (years)
 
 List 25 (random) HathiTrust identifiers
 ---------------------------------------
-uc2.ark+=13960=t3ws8k90q
-uc1.$b247331
-mdp.39015054063790
-uc1.$b703625
-nnc1.1002341255
-nyp.33433074865340
-njp.32101063693475
-uc1.32106005143174
-mdp.39015032546411
-mdp.39015031084299
-njp.32101069206785
-mdp.39015063585403
-uc1.$b807432
-wu.89058292509
-umn.31951002014780j
-uc1.b4437791
-uc1.$b684497
-uc1.b4422232
-uc1.b3473021
-wu.89031174980
-uc2.ark+=13960=t71v5d930
-mdp.39015000541642
-nyp.33433076045925
-inu.30000109120331
-uc1.32106008055367
+uc1.b4563454
+uc1.b3327073
+njp.32101063882664
+inu.30000115596060
+uc1.b250363
+uc2.ark+=13960=t8bg2hx7c
+uc1.$b242966
+mdp.39015040690391
+mdp.39015008930664
+uc1.$b748910
+mdp.39015010817990
+nyp.33433075817977
+uc1.b3835564
+mdp.39015022048519
+mdp.39015042964067
+uc2.ark+=13960=t76t0mk79
+uc1.$b662457
+mdp.39015011923664
+mdp.39015068038887
+mdp.39015008555032
+uc1.b4437795
+uiuo.ark+=13960=t8x92x07s
+nnc1.cu54305284
+uc2.ark+=13960=t6251mq20
+mdp.39015017923882
 
 List 25 random links from the 'Trust items dated prior to 1923
 --------------------------------------------------------------
-  * http://hdl.handle.net/2027/nyp.33433076049265
-  * http://hdl.handle.net/2027/uva.x004506487
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t2b854v1f
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t6348qg55
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t79s1x507
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t7xk87n2c
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t3st7gr0b
-  * http://hdl.handle.net/2027/uva.x000497580
-  * http://hdl.handle.net/2027/mdp.39015065764063
-  * http://hdl.handle.net/2027/loc.ark+=13960=t9p27hv26
-  * http://hdl.handle.net/2027/mdp.39015010447350
-  * http://hdl.handle.net/2027/nyp.33433074929922
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t87h1vb30
-  * http://hdl.handle.net/2027/mdp.39015073480926
-  * http://hdl.handle.net/2027/nyp.33433075736912
-  * http://hdl.handle.net/2027/nyp.33433074911219
-  * http://hdl.handle.net/2027/nyp.33433074840863
-  * http://hdl.handle.net/2027/uc2.ark+=13960=t6vx0cj3p
-  * http://hdl.handle.net/2027/uiuo.ark+=13960=t0js9tn6f
-  * http://hdl.handle.net/2027/mdp.39015063994514
-  * http://hdl.handle.net/2027/nyp.33433074843735
-  * http://hdl.handle.net/2027/nyp.33433076062755
-  * http://hdl.handle.net/2027/nyp.33433074854898
-  * http://hdl.handle.net/2027/mdp.39015047750586
-  * http://hdl.handle.net/2027/uva.x000393060
+  * http://hdl.handle.net/2027/uc1.31158006421456
+  * http://hdl.handle.net/2027/nyp.33433084128218
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t4nk3rr17
+  * http://hdl.handle.net/2027/mdp.39015005338812
+  * http://hdl.handle.net/2027/njp.32101067643765
+  * http://hdl.handle.net/2027/njp.32101066125723
+  * http://hdl.handle.net/2027/njp.32101067173193
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t2b855785
+  * http://hdl.handle.net/2027/mdp.39015063963824
+  * http://hdl.handle.net/2027/njp.32101067646354
+  * http://hdl.handle.net/2027/uva.x000388736
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t4zg71605
+  * http://hdl.handle.net/2027/wu.89006932180
+  * http://hdl.handle.net/2027/nyp.33433081859484
+  * http://hdl.handle.net/2027/nyp.33433074920640
+  * http://hdl.handle.net/2027/mdp.39015063979374
+  * http://hdl.handle.net/2027/uiuo.ark+=13960=t75t4542w
+  * http://hdl.handle.net/2027/nyp.33433082225594
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t6nz83w8s
+  * http://hdl.handle.net/2027/nyp.33433076081169
+  * http://hdl.handle.net/2027/mdp.39015006575982
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t8sb3zp5p
+  * http://hdl.handle.net/2027/nyp.33433074926498
+  * http://hdl.handle.net/2027/uc2.ark+=13960=t51g0j78x
+  * http://hdl.handle.net/2027/nyp.33433074855101
 
 Count & tabulate all the items from each library
 ------------------------------------------------

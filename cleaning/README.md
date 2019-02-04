@@ -7,8 +7,8 @@ First of all, this author rarely actually uses the word "clean" to describe data
 Unnormalized data falls into three or four categories:
 
   * null - data with no values
-  * incorrect - data whose values are untruthful
   * inconsistent - data whose values are manifested in multiple ways
+  * incorrect - data whose values are untruthful
 
 ## Null data
 
