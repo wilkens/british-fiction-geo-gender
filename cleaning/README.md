@@ -12,12 +12,14 @@ Unnormalized data falls into three or four categories:
 
 In the given data set, there are many examples of null data. For example, in the bibliographics (metadata) file, as many as 5800 records have no author value:
 
-| asdfas | asdfasdf | asdfasdf | asdfasdf | asdfasdf |
-|--------|----------|----------|----------|----------|
-|        |          |          |          |          |
-|        |          |          |          |          |
-|        |          |          |          |          |
-
+| count  | author          | 
+|--------|-----------------|
+| 5867   |                 |
+| 203    | Scott, Walter,  |
+| 192    | Conrad, Joseph, |
+| 161    | James, G. P. R. |
+| 156    | Oliphant,       |
+|--------|-----------------|
 
 
 ---  
