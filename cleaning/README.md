@@ -19,7 +19,18 @@ In the given data set, there are many examples of null data. For example, in the
 | 192    | Conrad, Joseph, |
 | 161    | James, G. P. R. |
 | 156    | Oliphant,       |
-|--------|-----------------|
+
+This is simply not true because everything was written by someone. On the other hand, the values for each of the "unauthored" works are probably unknown. Filling in the blanks is often a tedious process requiring both subject-matter expertise &amp; thorough investigation. Similarly, geographics (geo) data set lists many works with no genders:
+
+| count   | gender        | 
+|---------|---------------|
+| 2774708 | male          |
+| 651403  | female        |
+| 506733  | unknown       |
+| 286653  |               |
+| 69478   | mostly female |
+| 37489   | mostly male   |
+| 7242    | androg        |
 
 
 ---  
