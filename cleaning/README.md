@@ -104,8 +104,17 @@ If used in isolation, the genders dataset is well-normalized. There are few null
 
 ## Incorrect data
 
+Normalizing incorrect data -- data whose values are false -- is the most difficult. How is one to know the correct value is "white" when the value is labeled as "black"? How is one to know the author was born in 1960 and not 1961? Much of the data in these data sets was programmatically generated. The data was created through the use of machine learning models. Few people looked at the data and determined its over-all gender. Place names similar to "East London" were programmatically normalized to "London, UK". The only way to normalize ("corr ect") these sorts of things is to modify the original computer model(s), re-run the underlying applications, and re-generate the data. 
 
+Normalizing incorrect data is often a matter of belief. To what degree do you trust the data is correct? To what degree do you believe the data was created with rigor? Exactly as in the world of printed books, there is an authority factor, and one has to have a certain faith the book is the most up-to-date &amp; correct. The same is true for data sets.
+
+## "To normalize or not to normalize, that is the question"
+
+Our world is not perfect. Nor is our data, and one needs to answer the question, "How good is good enough?" When a data set has millions of records, and a few of them (say, 1000) have incorrect values, then the error rate is minuscule. The time &amp; effort needed to correct the values is probably not worth the precision gained from the observations. This is why unnormalized OCR (optical character recognition) is often good enough when doing text mining &amp; natural language processing. The goal is often to articulate broad generalizations concerning a large corpora. "Literature of the 18th Century exhibits these characteristics... The complete works of Mr. X &amp; Ms Y ebbed &amp; flowed between this, that, and the other thing... Over time, the descriptions of men &amp; women have evolved, and these descriptions can be exhibited in the following manner..."
+
+
+In short, "Don't let the perfect be the enemy of the good."
 
 ---  
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;   
-February 4, 2019
+February 5, 2019
