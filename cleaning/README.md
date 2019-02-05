@@ -99,6 +99,13 @@ Birth dates in the bibliographics database exhibit similar challenges:
 
 Everybody was born in some year, but none of those years equal "1957.0". Sure, you, as an intelligent person, understand what the data is communicating, but computers are really stupid, and they need to be given things that are as unambiguous as possible. In this case, the null values might be changed to 0, and the ".0" could be removed from all birth date values.
 
+If used in isolation, the genders dataset is well-normalized. There are few null values, and the data intended to be used to answer research questions is well-formed. On the other hand, the key/identifier ("docid") values are exhibited in a number of different shapes. Some of them are integers. Some of them are HathiTrust identifiers (such as "dul1.ark+=13960=t9f48pv82). Some of them (very few) appear to be comma-delimited values. Again, none of these things are issues if the genders data is used in &amp; of itself. On the other hand, if a research question were asked of the genders data, and then the researcher wanted to "join" the genders data with bibliographic or geographic information, then the joining process would be difficult because the keys in the genders data does not match the keys in the other data sets. This is a case where values need to be consistent between data sets.
+
+
+## Incorrect data
+
+
+
 ---  
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;   
 February 4, 2019
