@@ -108,12 +108,12 @@ Normalizing incorrect data -- data whose values are false -- is the most difficu
 
 Normalizing incorrect data is often a matter of belief. To what degree do you trust the data is correct? To what degree do you believe the data was created with rigor? Exactly as in the world of printed books, there is an authority factor, and one has to have a certain faith the book is the most up-to-date &amp; correct. The same is true for data sets.
 
+
 ## "To normalize or not to normalize, that is the question"
 
-Our world is not perfect. Nor is our data, and one needs to answer the question, "How good is good enough?" When a data set has millions of records, and a few of them (say, 1000) have incorrect values, then the error rate is minuscule. The time &amp; effort needed to correct the values is probably not worth the precision gained from the observations. This is why unnormalized OCR (optical character recognition) is often good enough when doing text mining &amp; natural language processing. The goal is often to articulate broad generalizations concerning a large corpora. "Literature of the 18th Century exhibits these characteristics... The complete works of Mr. X &amp; Ms Y ebbed &amp; flowed between this, that, and the other thing... Over time, the descriptions of men &amp; women have evolved, and these descriptions can be exhibited in the following manner..."
+Our world is not perfect. Nor is our data, and one needs to answer the question, "How good is good enough?" When a data set has millions of records, and a few of them (say, 1000) have incorrect values, then the error rate is minuscule. The time &amp; effort needed to correct the values is probably not worth the precision gained from the observations. This is why unnormalized OCR (optical character recognition) is often good enough when doing text mining &amp; natural language processing. The goal is often to articulate broad generalizations concerning a large corpora. "Literature of the 18th Century exhibits these characteristics... The complete works of Mr. X &amp; Ms Y ebbed &amp; flowed between this, that, and the other thing... Over time, the descriptions of men &amp; women have evolved, and these descriptions can be exhibited in the following ways..." 
 
-
-In short, "Don't let the perfect be the enemy of the good."
+Deciding whether or not to normalize one's data is often a judgment call based on time, energy, ability and the desire for perfection. But remember, "Don't let the perfect be the enemy of the good."
 
 ---  
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;   
