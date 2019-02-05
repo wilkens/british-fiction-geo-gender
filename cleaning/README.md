@@ -124,7 +124,7 @@ Data with null values need to be given values, especially if values exist. Deter
 
 Like above, normalizing inconsistently formatted data can be done manually or programmatically. Through simple observation a person can see how James's name might be changed throughout the database to "James, G. P. R." But determining what names to change and how to change them is a daunting task. After all, there are more than 41,000 distinct names in the bibliographics data set. Yikes!
 
-Fortunately, thanks to decades old algorithms, computers can be used to automate this sort of normalization. A good example is the [https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance](Levenshtein algorithm). [1]
+Fortunately, thanks to decades old algorithms, computers can be used to automate this sort of normalization. A good example is the [Levenshtein algorithm](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance). [1]
 
 [1] Levenshtein algorithm - https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance
 
