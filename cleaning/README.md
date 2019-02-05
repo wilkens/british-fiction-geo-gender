@@ -73,7 +73,7 @@ The inverted nature of personal names brings up another point -- sorting. Presen
 | 45    | The Shakespeare Head edition of...   |
 | 45    | The Waverley novels                  |
 | 43    | The works of H. G. Wells.            |
-| 35    | Men of good will / | $c: by Jules... |
+| 35    | Men of good will / \| $c: by Jules... |
 | 34    | [Works]                              |
 
 All sorts of normalizing (every pun intended) can be done here, but they can all be boiled down to a single solution -- the creation of new data field possibly called "sort title". The values in this new field would have no leading articles ("a", "the", nor "an") and no punctuation. All the letters would be lower-cased, and all of the values would be stripped of extraneous information (like "/ | $c: by Jules"). To put it another way, the original title values could be "display titles", and the new field would be used for internal purposes. Of all the data in these data sets, the title values are the closest to "dirty", and the reasons they exist this way are rooted in the the lore of library cataloging practice.
