@@ -10,7 +10,7 @@ Unnormalized data falls into three categories:
   * inconsistent - data whose values are manifested in multiple ways
   * incorrect - data whose values are untruthful
 
-Each category is described in greater detail below.
+Below, each category is described in greater detail.
 
 
 ## Null data
@@ -104,7 +104,7 @@ If used in isolation, the genders dataset is well-normalized. There are few null
 
 ## Incorrect data
 
-Normalizing incorrect data -- data whose values are false -- is the most difficult. How is one to know the correct value is "white" when the value is labeled as "black"? How is one to know the author was born in 1960 and not 1961? Much of the data in these data sets was programmatically generated. The data was created through the use of machine learning models. Few people looked at the data and determined its over-all gender. Place names similar to "East London" were programmatically normalized to "London, UK". The only way to normalize ("corr ect") these sorts of things is to modify the original computer model(s), re-run the underlying applications, and re-generate the data. 
+Normalizing incorrect data -- data whose values are false -- is the most difficult. How is one to know the correct value is "white" when the value is labeled as "black"? How is one to know the author was born in 1960 and not 1961? Much of the data in these data sets was programmatically generated. The data was created through the use of machine learning models. Few people looked at the data and determined its over-all gender. Place names similar to "East London" were programmatically normalized to "London, UK". The only way to normalize ("correct") these sorts of things is to modify the original computer model(s), re-run the underlying applications, and re-generate the data. 
 
 Normalizing incorrect data is often a matter of belief. To what degree do you trust the data is correct? To what degree do you believe the data was created with rigor? Exactly as in the world of printed books, there is an authority factor, and one has to have a certain faith the book is the most up-to-date &amp; correct. The same is true for data sets.
 
@@ -114,6 +114,25 @@ Normalizing incorrect data is often a matter of belief. To what degree do you tr
 Our world is not perfect. Nor is our data, and one needs to answer the question, "How good is good enough?" When a data set has millions of records, and a few of them (say, 1000) have incorrect values, then the error rate is minuscule. The time &amp; effort needed to correct the values is probably not worth the precision gained from the observations. This is why unnormalized OCR (optical character recognition) is often good enough when doing text mining &amp; natural language processing. The goal is often to articulate broad generalizations concerning a large corpora. "Literature of the 18th Century exhibits these characteristics... The complete works of Mr. X &amp; Ms Y ebbed &amp; flowed between this, that, and the other thing... Over time, the descriptions of men &amp; women have evolved, and these descriptions can be exhibited in the following ways..." 
 
 Deciding whether or not to normalize one's data is often a judgment call based on time, energy, ability and the desire for perfection. But remember, "Don't let the perfect be the enemy of the good."
+
+
+## How to normalize
+
+If you have gotten this far, then you may be asking yourself, "Okay, but how do I do the work?" Like many other things, it depends. It depends on the types of normalization you desire and the way the data is manifested.
+
+Data with null values need to be given values, especially if values exist. Determining these values can often be done manually or programmatically. A work can be read and re-read by an expert to determine its overall tone, and the tone can then be set in the data. Alternatively, a computer "model" can be created based on previously existing labeled data. New or unknown works can then be compared to the model, and a value can be generated whose certainty ranges from 0 to 1, where 0 represents no certainty, and 1 represents 100% certainty. Creating "models" is something for another essay.
+
+Like above, normalizing inconsistently formatted data can be done manually or programmatically. Through simple observation a person can see how James's name might be changed throughout the database to "James, G. P. R." But determining what names to change and how to change them is a daunting task. After all, there are more than 41,000 distinct names in the bibliographics data set. Yikes!
+
+Fortunately, thanks to decades old algorithms, computers can be used to automate this sort of normalization. A good example is the [https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance](Levenshtein algorithm). [1]
+
+[1] Levenshtein algorithm - https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance
+
+
+
+
+
+
 
 ---  
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;   
