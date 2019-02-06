@@ -120,11 +120,15 @@ Deciding whether or not to normalize one's data is often a judgment call based o
 
 If you have gotten this far, then you may be asking yourself, "Okay, but how do I do the work?" Like many other things, it depends. It depends on the types of normalization you desire and the way the data is manifested.
 
-Data with null values need to be given values, especially if values exist. Determining these values can often be done manually or programmatically. A work can be read and re-read by an expert to determine its overall tone, and the tone can then be set in the data. Alternatively, a computer "model" can be created based on previously existing labeled data. New or unknown works can then be compared to the model, and a value can be generated whose certainty ranges from 0 to 1, where 0 represents no certainty, and 1 represents 100% certainty. Creating "models" is something for another essay.
+Data with null values probably needs to be given values, especially if values exist. Determining these values can often be done manually or programmatically. A work can be read and re-read by an expert to determine its overall tone, and the tone can then be set in the data. Alternatively, a computer "model" can be created based on previously existing labeled data. New or unknown works can then be compared to the model, and a value can be generated whose certainty ranges from 0 to 1, where 0 represents no certainty, and 1 represents 100% certainty. Creating "models" is beyond the scope of this essay.
 
 Like above, normalizing inconsistently formatted data can be done manually or programmatically. Through simple observation a person can see how James's name might be changed throughout the database to "James, G. P. R." But determining what names to change and how to change them is a daunting task. After all, there are more than 41,000 distinct names in the bibliographics data set. Yikes!
 
-Fortunately, thanks to decades old algorithms, computers can be used to automate this sort of normalization. A good example is the [Levenshtein algorithm](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance). [1]
+
+Thanks to decades old algorithms, computers can be used to automate this sort of normalization. A good example is the [Levenshtein algorithm](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance). Levenshtein calculates a "editing" distance between two strings and then compares those distances to determine a "correct" value. If zero typographical edits exist between two strings, then the strings are considered equal. If one typographical edit exists between two strings, then the strings are deemed further "apart". After many strings are compared to many other strings, it is possible to group the distances and determine which string is correct. Levenshtein was a Soviet mathematician who articulated the algorithm in 1965. The algorithm has been implemented in at least three dozen programming languages. [1]
+
+
+## Links
 
 [1] Levenshtein algorithm - https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance
 
