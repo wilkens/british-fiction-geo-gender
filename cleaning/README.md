@@ -152,17 +152,18 @@ On the other hand, it is quite possible you will not be needing the whole of eac
 
 In other words, create a comma-separated file named london.csv, and include everything in the file where the address is London and published in the last half of the 19th Century and has an author value.
 
-Each of the resulting files are small enough to be imported into a spreadsheet, but instead, open them up in OpenRefine. There are plenty of OpenRefine tutorials on the Web, but here is the tiniest of instructions:
+Each of the resulting files are small enough to be imported into a spreadsheet, but instead, open them up in OpenRefine. There are plenty of OpenRefine tutorials on the Web, but here is the tiniest set of instructions:
 
    1. Launch OpenRefine
    2. Create a new project
    3. Select one of the comma-separated value files
    4. Accept the default importing options
    5. Create text facets based on author names
-   6. Cluster the results to normalize the results
-   7. Clear the facets
-   8. Convert numeric columns to... numeric values (not string)
-   9. Create number facets based on years, occurrences, etc. 
+   6. Cluster the results to normalize the names
+   7. Facet on other columns to narrow the results some more
+   8. Clear the facets
+   9. Convert numeric columns to... numeric values (not string)
+   10. Create number facets based on years, occurrences, etc. 
 
 Through this process you will both normalize your data, become familiar with it, and ultimately create a small, manageable data set for further study.
 
