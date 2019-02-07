@@ -5,9 +5,13 @@
 
 # Eric Lease Morgan <emorgan@nd.edu>
 # January 27, 2019 - first cut
+# February 1, 2019 - using normalized data
 
 
-# change to the appropriate directory, do the work, and done
-cd ./etc
-cat gender2db.sql | sqlite3
+# read the original (gender.csv) data, and create normalized tables from it
+./bin/gender2tables.pl > ./etc/gender-genders.tsv
+
+# delete any existing database, do the work, and done
+rm ./etc/genders.db
+cat ./etc/genders.sql | sqlite3 ./etc/genders.db
 exit

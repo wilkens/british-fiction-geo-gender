@@ -1,0 +1,658 @@
+
+Geographics reports
+======================
+  This is a small set of reports applied against the geographics
+  database. Their primary purpose is two-fold: 1) to give the reader
+  an idea of what is in the database, and 2) give the reader a set
+  of sample SQL statements for study & use. --Eric Lease Morgan
+  <emorgan@nd.edu>, January 31, 2019.
+
+List the database's structure
+-----------------------------
+CREATE TABLE geographics(
+  "corpus" TEXT,
+  "htid" TEXT,
+  "text_string" TEXT,
+  "lang" TEXT,
+  "occurs" TEXT,
+  "author" TEXT,
+  "title" TEXT,
+  "pub_date" TEXT,
+  "gender" TEXT,
+  "genre" TEXT,
+  "white" TEXT,
+  "origin_area" TEXT,
+  "origin_nation" TEXT,
+  "place_id" TEXT,
+  "formatted_address" TEXT,
+  "location_type" TEXT,
+  "country_long" TEXT,
+  "country_short" TEXT,
+  "admin_1_long" TEXT,
+  "admin_1_short" TEXT,
+  "admin_2" TEXT,
+  "admin_3" TEXT,
+  "admin_4" TEXT,
+  "admin_5" TEXT,
+  "locality" TEXT,
+  "sublocality_1" TEXT,
+  "sublocality_2" TEXT,
+  "sublocality_3" TEXT,
+  "neighborhood" TEXT,
+  "premise" TEXT,
+  "subpremise" TEXT,
+  "street_number" TEXT,
+  "street_address" TEXT,
+  "route" TEXT,
+  "post_code" TEXT,
+  "natural_feature" TEXT,
+  "point_of_interest" TEXT,
+  "colloquial_area" TEXT,
+  "continent" TEXT,
+  "other" TEXT,
+  "lat" TEXT,
+  "lon" TEXT,
+  "wordcount" TEXT
+);
+
+Number of records (HathiTrust identifiers) in the database
+----------------------------------------------------------
+4333706
+
+Number of distinct HathiTrust identifiers in the database
+---------------------------------------------------------
+47753
+
+Number of mentioned of places in the whole corpus
+-------------------------------------------------
+14485369
+
+Roughly speaking, the number of mentioned places per document
+-------------------------------------------------------------
+303
+
+Count & tabulate the 50 most frequently alluded to location types
+-----------------------------------------------------------------
+1414981	locality
+549254	country
+339564	point_of_interest
+289839	natural_feature
+241435	administrative_area_level_1
+202987	route
+87576	administrative_area_level_2
+87215	colloquial_area
+78016	neighborhood
+67086	restaurant
+64989	continent
+63504	university
+61302	bar
+56819	school
+56228	park
+45005	store
+40169	establishment
+39970	lodging
+36496	church
+31596	sublocality_level_1
+30195	doctor
+29546	administrative_area_level_3
+23640	clothing_store
+22381	museum
+20181	food
+18197	health
+16796	premise
+14099	lawyer
+12225	general_contractor
+11996	administrative_area_level_4
+11456	real_estate_agency
+11051	night_club
+10950	train_station
+10632	home_goods_store
+10599	hospital
+10365	library
+9930	local_government_office
+8636	finance
+7808	art_gallery
+7632	travel_agency
+7107	insurance_agency
+7058	atm
+6946	furniture_store
+6789	shopping_mall
+6670	cafe
+6647	subway_station
+6540	accounting
+6374	movie_theater
+6361	beauty_salon
+5886	meal_takeaway
+
+Count & tabulate the 50 most frequently used place names
+--------------------------------------------------------
+76325	London, UK
+54759	United States
+47176	England, UK
+33715	Great Britain, United Kingdom
+32814	France
+31468	Paris, France
+30753	Europe
+24948	Germany
+24523	New York, NY, USA
+23967	Italy
+23749	India
+23120	Rome, Italy
+21181	Spain
+19563	Scotland, UK
+19066	China
+18761	Ireland
+16100	Russia
+15910	Egypt
+14275	Africa
+13809	University of Oxford, Oxford, Oxfordshire OX1, UK
+13279	Edinburgh, Edinburgh, UK
+13114	California, USA
+12354	Wales, UK
+12082	University of Cambridge, The Old Schools, Trinity Ln, Cambridge, Cambridgeshire CB2 1TN, UK
+11586	Netherlands
+11518	Israel
+11413	Venice, Italy
+11310	Greece
+10905	Atlantic Monthly Group, 600 New Hampshire Ave NW # 4, Washington, DC 20037, USA
+10893	Australia
+10817	Florence, Italy
+10079	Canada
+9539	Switzerland
+9108	Mediterranean Sea
+8919	Turkey
+8467	Naples, Metropolitan City of Naples, Italy
+8459	Jerusalem, Israel
+8424	Dublin, Ireland
+8270	Yorkshire County Fish Shop, Bay Lake, FL, USA
+8137	Vienna, Austria
+7834	Berlin, Germany
+7434	Asia
+7416	Athens, Greece
+7344	United Kingdom
+7240	Brighton, The City of Brighton and Hove, UK
+7192	River Thames, United Kingdom
+6884	New Zealand
+6856	Glasgow, Glasgow City, UK
+6819	West Indies, Cuba
+6818	Austria
+
+Count & tabulate the 50 most frequently alluded to nations
+----------------------------------------------------------
+4242604	
+43113	England
+14956	Britain - England
+5734	India
+3596	South Africa
+2718	Scotland
+2327	Ireland
+2244	Barbados or Montserrat
+1821	Poland - England
+1742	India - England
+1383	Trinidad
+1369	Jamaica
+1342	Ireland - England
+1209	US
+1174	Canada
+1116	Australia
+695	Canada - Britain
+650	Japan
+561	Burma - England
+456	Dominica
+343	South Africa - Britain
+300	Nigeria
+242	Austria - Britain
+221	Egypt
+215	New Zealand
+174	Britain - Scotland
+164	France - Britain
+135	Unknown
+120	West Africa
+115	France - Scotland
+102	France
+101	        
+101	Armenian
+94	Northern Ireland
+83	Guyana
+78	British
+76	Kenya
+60	America
+55	South Africa - England
+41	Toro (Uganda)
+38	Britain
+38	England - US
+
+Count & tabulate the 50 most frequently alluded to countries
+------------------------------------------------------------
+1440191	United States
+933024	United Kingdom
+252103	France
+186069	
+184458	Italy
+106518	Germany
+105101	Canada
+75475	India
+72281	Australia
+69616	Spain
+67020	Ireland
+50090	Russia
+42999	Greece
+36954	Switzerland
+30753	Egypt
+30414	China
+30139	Israel
+29417	Belgium
+28372	Netherlands
+25519	South Africa
+24129	New Zealand
+23835	Turkey
+23491	Austria
+21272	Mexico
+18137	Portugal
+15118	Poland
+14237	Japan
+12134	Norway
+11345	Cuba
+11160	Brazil
+11114	Denmark
+10224	Iran
+10073	Indonesia
+9991	Sweden
+9193	Czech Republic
+9009	Syria
+8138	Saudi Arabia
+6784	Hungary
+6544	Iraq
+6297	Jamaica
+6263	Peru
+6121	Morocco
+6112	Algeria
+5550	Pakistan
+5516	Ukraine
+5332	Argentina
+5234	Philippines
+4733	Finland
+4685	Malaysia
+4677	Nigeria
+
+Count & tabulate the 50 most frequently alluded to natural features
+-------------------------------------------------------------------
+4046380	
+33707	Great Britain
+9098	Mediterranean Sea
+7192	River Thames
+5497	Alps
+5185	Rhine River
+4887	Sicily
+3986	North Sea
+3251	Newfoundland
+2890	Seine
+2788	Danube
+2533	Red Sea
+2296	Himalayas
+2106	Atlantic Ocean
+2102	Black Sea
+2052	Rocky Mountains
+2006	Indian Ocean
+1959	Congo River
+1897	Adriatic Sea
+1730	Bay of Biscay
+1715	Apennine Mountains
+1429	Montmartre
+1404	Pyrenees
+1398	Pacific Ocean
+1390	Kalimantan
+1374	Saint Martin
+1361	Rhône
+1322	Pentecost
+1303	Dead Sea
+1303	New Guinea
+1256	Andes
+1228	Botany Bay
+1223	Bosphorus
+1169	Trinidad
+1159	Volga River
+1144	Euphrates
+1091	Cape Horn
+1059	Polynesia
+1049	Elbe
+1048	Long Island
+1046	Corfu
+1015	Arabian Gulf
+992	River Tiber
+992	Sumatra
+991	British Isles
+950	Moselle
+939	Gulf of Mexico
+925	Tahiti
+859	Holy City
+785	Tigris River
+
+Count & tabulate the 50 most frequently alluded to points of interest
+---------------------------------------------------------------------
+4331054	
+837	Champ de Mars
+220	2175 K Street
+164	St.Vital Centre
+133	Billy Bishop Toronto City Airport
+100	Battery Park
+98	Bussia
+97	Local Government Association
+81	Larnaca College
+65	Parkside Hospital
+53	CF Chinook Centre
+49	McCarran International Airport
+44	Camp Oconto
+40	Charles de Gaulle Airport
+35	Alnwick Castle
+33	Duchess Anna Amalia Library
+33	Ermine Business Park
+33	Haling Park
+29	Acropolis
+28	St. John's Church Downshire Hill
+28	Temple Maison Fraternelle
+27	Hasdrubal Thalassa & Spa Hammamet
+19	ARUNDEL MILLS SHOP CTR layover
+19	Collège de Rivière Salée
+18	Brougham Hall
+18	Mall of Sofia
+17	Catoctin Mountain Park
+13	Highway Motors & Panelbeaters
+13	Kruger National Park
+12	Melbourne Private Hospital
+12	South Arkansas Regional At Goodwin Field
+11	University of London
+10	Domaine du Peyronnet
+9	Crossness
+9	O'Hare International Airport
+9	Piazza della Bocca della Verità
+9	Roma
+8	660 Madison Ave
+8	Binchester Roman Fort
+8	Richmond Park
+8	Torosay Castle and Gardens
+7	Ayrton Exploration Consulting Ltd
+7	LIFESTYLE ON KLOOF
+7	Lummus Park
+7	San Nicolò dei Mendicoli
+7	Walcot Hall
+6	John C. Stennis Space Center
+6	Strano & Associates Real Estate
+5	Aloe Grove
+5	Central de Abastos
+
+Count & tabulate the genres
+---------------------------
+4257238	Fiction
+54341	Fiction-Novel
+9071	Fiction-Stories
+7515	Nonfiction-Other
+1945	Travelogue/Guidebook
+1894	Autobiography/Memoir
+1088	History
+614	Fiction-Unspecified
+
+Count & tabulate the genders
+----------------------------
+2774708	male
+651403	female
+506733	unknown
+286653	
+69478	mostly_female
+37489	mostly_male
+7242	androg
+
+Count & tabulate the 'whiteness' of the corpus
+----------------------------------------------
+4258928	
+55838	white
+13444	Nonwhite
+5496	White
+
+Count & tabulate the 50 publication dates
+-----------------------------------------
+85794	1872
+64572	1899
+57047	1903
+55934	1902
+55488	1886
+53983	1901
+48187	1896
+48077	1873
+45930	1895
+45861	1889
+44359	1894
+43903	1905
+43607	1911
+41703	1908
+40790	1913
+39907	1893
+39394	1904
+39162	1906
+39082	1892
+37480	1912
+37351	1909
+37213	1900
+36081	2008
+35833	1887
+33609	1898
+33136	1914
+33058	1888
+32820	1910
+32702	1890
+32510	1891
+32359	1907
+32140	2007
+31884	1989
+31827	1880
+30866	2009
+30392	1897
+29476	1991
+28420	1922
+28048	1879
+27919	1881
+27487	2006
+27261	2004
+27112	1884
+27073	1915
+26869	1885
+26201	1968
+26176	2005
+26119	1990
+26063	1920
+25594	1967
+
+Count & tabulate the 50 most frequently mentioned premise
+---------------------------------------------------------
+4279652	
+12084	The Old Schools
+4478	Place d'Armes
+1418	Westminster Bridge
+1208	The Old Bailey
+1189	Royal Military Academy
+894	Fifth Avenue Hotel
+704	Kensington Gardens
+615	Balmoral Estates
+514	Euston Square
+489	St. Paul's Churchyard
+477	Grand Nile Tower Hotel
+320	City Campus East
+310	147
+301	Central House
+267	Vauxhall Railway Station
+257	Chequers
+237	Cour du château
+234	Castle Esplanade
+233	Saint Saviours Hall
+229	Enterprise House
+221	1760
+204	D
+203	Windsor Castle
+191	Old Police House
+183	Lohengrin
+180	The Headland
+176	Battersea Bridge
+173	Nijinsky House
+167	Riverside Building
+167	The Estate Office
+165	Hawthornden Castle
+156	Dotheboys Hall
+156	Garamond House
+156	Gray's Inn
+156	Porte Saint-Denis
+151	Wantley Manor
+148	Gads Hill Place
+144	c
+142	Braemar
+140	Thames Tunnel Mills
+139	North Foreland Lighthouse
+134	Building 396
+134	Candlemas Cottage
+134	Southwark Bridge
+133	Buyers Walk W Market
+133	Inverlochy Castle
+132	Carlton House
+131	Castle Lodge
+123	4/5 Pavilion Buildings
+
+Count & tabulate the 50 most frequently mentioned museums or libraries
+----------------------------------------------------------------------
+2423	Louvre Museum, 75001 Paris, France
+2338	Middlesex Community College, 33 Kearney Square, Lowell, MA 01852, USA
+1092	Atwater Library, 3379 Glendale Blvd, Los Angeles, CA 90039, USA
+1008	The Moscow Kremlin, Moscow, Russia, 103073
+991	United States Holocaust Memorial Museum, 100 Raoul Wallenberg Pl SW, Washington, DC 20024, USA
+793	The Field Museum, 1400 S Lake Shore Dr, Chicago, IL 60605, USA
+593	Portage Lake District Library, 58 Huron St, Houghton, MI 49931, USA
+556	Huntingdon College, 1500 E Fairview Ave, Montgomery, AL 36106, USA
+489	The British Museum, Great Russell St, London WC1B 3DG, UK
+433	Lyndhurst, 635 S Broadway, Tarrytown, NY 10591, USA
+429	Madame Tussauds New York, 234 W 42nd St, New York, NY 10036, USA
+389	Kensington Palace, Kensington Gardens, London W8 4PX, UK
+356	New York Times Corporation Library, 620 8th Ave, New York, NY 10018, USA
+353	Amherst College, Amherst, MA 01002, USA
+348	Morven Museum & Garden, 55 Stockton St, Princeton, NJ 08540, USA
+348	Sanskrit Library, Cambridge, MA 02138, USA
+316	The Ernest Hemingway Home and Museum, 907 Whitehead St, Key West, FL 33040, USA
+286	Library, Marylebone, London W1G, UK
+282	Museo Nacional del Prado, Paseo del Prado, s/n, 28014 Madrid, Madrid, Spain
+275	Bodleian Library, Broad St, Oxford, Oxfordshire OX1 3BG, UK
+269	Neville Public Museum, 210 Museum Pl, Green Bay, WI 54303, USA
+268	Pitti Palace, Piazza de' Pitti, 1, 50125 Firenze, Italy
+255	San Rafael Library, 1240 Nithsdale Rd, Pasadena, CA 91105, USA
+237	Castle of Montbeliard, Cour du château, 25200 Montbéliard, France
+229	The Black Country Living Museum, Tipton Rd, Dudley, West Midlands DY1 4SQ, UK
+225	Winter Palace, Palace Embankment, 32, Sankt-Peterburg, Russia, 190000
+221	George Washington's Mount Vernon, 3200 Mount Vernon Hwy, Mt Vernon, VA 22121, USA
+221	The Paley Center For Media, 25 W 52nd St, New York, NY 10019, USA
+214	The Honourable Society of the Inner Temple, Crown Office Row, London EC4Y, UK
+202	Schönbrunn Palace, Schönbrunner Schloßstraße 47, 1130 Wien, Austria
+199	Historisches Museum der Pfalz, Domplatz 4, 67346 Speyer, Germany
+192	Tsarskoye Selo, Garden St, 7, Pushkin, g. Sankt-Peterburg, Russia, 196601
+183	National Portrait Gallery, 8th St NW & F St NW, Washington, DC 20001, USA
+181	Golden Library - Jefferson County Public Library, 1019 10th St, Golden, CO 80401, USA
+181	Palazzo Vecchio, Piazza della Signoria, 50122 Firenze, Italy
+179	Powysland Museum, Welshpool, Welshpool, Powys SY21, UK
+170	New York Public Library - Stephen A. Schwarzman Building, 5th Ave at 42nd St, New York, NY 10018, USA
+165	Museum of the Plains Indian, 19 Museum Loop, Browning, MT 59417, USA
+156	Fort George National Historic Site, Parks Canada, 51 Queens Street, Niagara-on-the-Lake, ON L0S 1J0, Canada
+154	Robben Island Museum, Robben Island, Cape Town, 7400, South Africa
+152	Barbican Centre, Silk St, London EC2Y 8DS, UK
+145	Boscobel House and Gardens, 1601 NY-9D, Garrison, NY 10524, USA
+145	Karnak, El-Karnak, Luxor, Luxor Governorate, Egypt
+144	Confederate Memorial Hall, 3148 Kingston Pike, Knoxville, TN 37919, USA
+142	Whitney Museum of American Art, 99 Gansevoort St, New York, NY 10014, USA
+140	National Underground Railroad Freedom Center, 50 E Freedom Way, Cincinnati, OH 45202, USA
+137	Guyana National Museum, Georgetown, Guyana
+126	Uffizi Gallery, Piazzale degli Uffizi, 6, 50122 Firenze, Italy
+124	Age of Sail Heritage Centre, 8334 NS-209, Port Greville, NS B0M 1T0, Canada
+123	Doctor Josephus Hall House, 226 S Jackson St, Salisbury, NC 28144, USA
+
+Count & tabulate the 50 most frequently mentioned cities along with their coordinates
+-------------------------------------------------------------------------------------
+76325	London, UK (51.5073509 : -0.1277583)
+31432	Paris, France (48.856614 : 2.3522219)
+24523	New York, NY, USA (40.7127837 : -74.0059413)
+23120	Rome, Italy (41.9027835 : 12.4963655)
+13279	Edinburgh, Edinburgh, UK (55.953252 : -3.188267)
+11413	Venice, Italy (45.4408474 : 12.3155151)
+10817	Florence, Italy (43.7695604 : 11.2558136)
+8459	Jerusalem, Israel (31.768319 : 35.21371)
+8424	Dublin, Ireland (53.3498053 : -6.2603097)
+8135	Vienna, Austria (48.2081743 : 16.3738189)
+7834	Berlin, Germany (52.5200066 : 13.404954)
+7416	Athens, Greece (37.983917 : 23.7293599)
+7240	Brighton, The City of Brighton and Hove, UK (50.82253 : -0.137163)
+6856	Glasgow, Glasgow City, UK (55.864237 : -4.251806)
+6708	Manchester, UK (53.4807593 : -2.2426305)
+6516	Bristol, City of Bristol, UK (51.454513 : -2.58791)
+6210	Brussels, Belgium (50.8503396 : 4.3517103)
+5914	Richmond, VA, USA (37.5407246 : -77.4360481)
+5642	Norfolk, VA, USA (36.8507689 : -76.2858726)
+5634	Birmingham, West Midlands, UK (52.486243 : -1.890401)
+5599	Liverpool, Merseyside, UK (53.4083714 : -2.9915726)
+5394	Moscow, Russia (55.755826 : 37.6173)
+5366	Los Angeles, CA, USA (34.0522342 : -118.2436849)
+5283	Boston, MA, USA (42.3600825 : -71.0588801)
+5201	Milan, Italy (45.4654219 : 9.1859243)
+5033	Calais, France (50.95129 : 1.858686)
+4939	Istanbul, İstanbul, Turkey (41.0082376 : 28.9783589)
+4779	Madrid, Madrid, Spain (40.4167754 : -3.7037902)
+4772	Marseille, France (43.296482 : 5.36978)
+4636	Geneva, Switzerland (46.2043907 : 6.1431577)
+4631	Kolkata, West Bengal 700001, India (22.572646 : 88.363895)
+4483	San Francisco, CA, USA (37.7749295 : -122.4194155)
+4471	St Petersburg, Russia (59.9342802 : 30.3350986)
+4343	Portsmouth, Portsmouth, UK (50.8197675 : -1.0879769)
+4319	Westminster, CO, USA (39.8366528 : -105.0372046)
+4066	Mumbai, Maharashtra, India (19.0759837 : 72.8776559)
+3995	Southampton, Southampton, UK (50.9097004 : -1.4043509)
+3994	Dresden, Germany (51.0504088 : 13.7372621)
+3958	York, PA, USA (39.9625984 : -76.727745)
+3898	Surrey, BC, Canada (49.1044302 : -122.801094)
+3881	Cairo, Cairo Governorate, Egypt (30.0444196 : 31.2357116)
+3830	Chicago, IL, USA (41.8781136 : -87.6297982)
+3825	Dover, DE, USA (39.158168 : -75.5243682)
+3787	Bordeaux, France (44.837789 : -0.57918)
+3687	Exeter, Exeter, Devon, UK (50.718412 : -3.533899)
+3669	Alexandria, Alexandria Governorate, Egypt (31.2000924 : 29.9187387)
+3654	Pall Mall, TN 38577, USA (36.5506245 : -84.9677248)
+3601	Lisbon, Portugal (38.7222524 : -9.1393366)
+3569	Amsterdam, Netherlands (52.3702157 : 4.8951679)
+3554	Suffolk, VA, USA (36.7282054 : -76.5835621)
+
+Count & tabulate the 50 most frequently mentioned museums or libraries in London
+--------------------------------------------------------------------------------
+489	The British Museum, Great Russell St, London WC1B 3DG, UK
+389	Kensington Palace, Kensington Gardens, London W8 4PX, UK
+286	Library, Marylebone, London W1G, UK
+214	The Honourable Society of the Inner Temple, Crown Office Row, London EC4Y, UK
+152	Barbican Centre, Silk St, London EC2Y 8DS, UK
+71	The British Library, 96 Euston Rd, Kings Cross, London NW1 2DB, UK
+50	Wellington Barracks, Birdcage Walk, Westminster, London SW1E 6HQ, UK
+47	Hunterian Museum, 35-43 Lincoln's Inn Fields, London WC2A 3PE, UK
+40	Golden Hinde II, 1, Pickfords Wharf, Clink St, London SE1 9DG, UK
+33	Royal Geographical Society, 1 Kensington Gore, Kensington, London SW7 2AR, UK
+30	The Clink Prison Museum, 1 Clink St, London SE1 9DG, UK
+28	Museum of London, 150 London Wall, London EC2Y 5HN, UK
+18	Wellcome Library, 183 Euston Rd, Kings Cross, London NW1 2BE, UK
+16	IWM, Lambeth Rd, London SE1 6HZ, UK
+15	The Canadian Medical Hall of Fame, 267 Dundas St, London, ON N6A 1H2, Canada
+13	Faraday Museum, Albemarle St, Mayfair, London W1S 4BS, UK
+12	The London Library, 14 St James's Square, St. James's, London SW1Y 4LG, UK
+10	St Bride Library, 14 Bride Ln, London EC4Y 8EQ, UK
+10	V & A Museum of Childhood, Cambridge Heath Rd, London E2 9PA, UK
+9	Conway Hall, 25 Red Lion Square, London WC1R 4RL, UK
+7	Emery Walker Trust, 7 Hammersmith Terrace, London, Hammersmith, Greater London W6 9TS, UK
+6	Bruce Castle Museum, Lordship Ln, London N17 8NU, UK
+6	The Company Of Watermen & Lightermen, 16-18 St Mary at Hill, London EC3R 8EF, UK
+5	Charles Dickens Museum, 48 Doughty St, London WC1N 2LX, UK
+5	Keats House, 10 Keats Grove, Hampstead, London NW3 2RR, UK
+5	Madame Tussauds London, Marylebone Rd, Marylebone, London NW1 5LR, UK
+5	Mildmay Library, Mildmay Ward, London N1, UK
+4	Guildhall Library, Aldermanbury, London EC2V 7HH, UK
+4	Inner Temple Library, Inner Temple, London EC4Y 7DA, UK
+4	Sir John Soane's Museum, 13 Lincoln's Inn Fields, London WC2A 3BP, UK
+1	Homerton Library, Homerton High St, London E9 6AS, UK
+1	Middle Temple Library, Middle Temple Ln, London EC4Y 9BT, UK
+

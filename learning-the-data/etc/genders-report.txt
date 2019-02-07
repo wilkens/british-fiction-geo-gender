@@ -1,0 +1,159 @@
+
+Gender reports
+==============
+  This is a small set of reports applied against the genders
+  database. Their primary purpose is two-fold: 1) to give the reader
+  an idea of what is in the database, and 2) give the reader a set
+  of sample SQL statements for study & use. --Eric Lease Morgan
+  <emorgan@nd.edu>, February 1, 2019.
+
+List the database's structure
+-----------------------------
+CREATE TABLE dates(
+
+	"docid" TEXT,
+	"date" TEXT
+  
+);
+CREATE TABLE genders(
+
+	"docid"      TEXT,
+	"gender"     TEXT,
+	"characters" INTEGER,
+	"agent"      INTEGER,
+	"mod"        INTEGER,
+	"patient"    INTEGER,
+	"poss"       INTEGER,
+	"speaking"   INTEGER
+
+);
+
+Number of records in the dates table
+------------------------------------
+134335
+
+Count & tabulate the 25 most frequent dates (years)
+---------------------------------------------------
+1777	1969
+1739	1968
+1729	1990
+1716	1970
+1710	1997
+1695	1991
+1664	1992
+1664	1994
+1656	1989
+1634	2007
+1632	1996
+1626	2005
+1621	1967
+1616	1993
+1604	2004
+1598	1995
+1596	1998
+1590	2006
+1583	1999
+1579	2000
+1558	1988
+1483	2001
+1469	2003
+1464	1979
+1441	1987
+
+Count & tabulate the 25 most frequent years from the 19th century
+-----------------------------------------------------------------
+668	1899
+594	1895
+593	1896
+536	1898
+500	1897
+476	1893
+451	1894
+432	1892
+384	1890
+373	1891
+324	1888
+310	1889
+289	1887
+285	1886
+274	1883
+254	1884
+232	1885
+221	1882
+220	1880
+204	1881
+197	1875
+196	1876
+192	1872
+189	1877
+183	1871
+
+List all the items from a given year (1802)
+-------------------------------------------
+13486
+13525
+13592
+2212
+2973
+5643
+5754
+6849
+7400
+dul1.ark+=13960=t9f48pv82
+
+Number of records in the genders table
+--------------------------------------
+403010
+
+Number of distinct records in the genders table
+-----------------------------------------------
+134335
+
+Count & tabulate genders
+------------------------
+   female  1991617
+     male  5326259
+  unknown  3072892
+
+Count & tabulate genders in the 19th Century
+--------------------------------------------
+   female   252137
+     male   616123
+  unknown   312990
+
+Count & tabulate genders in the 20th Century
+--------------------------------------------
+   female  1487180
+     male  4064743
+  unknown  2379515
+
+Count & tabulate genders from a given item (dul1.ark+=13960=t9f48pv82)
+----------------------------------------------------------------------
+   female        4
+     male       15
+  unknown        8
+
+Comparison of roles between women & men
+---------------------------------------
+  gender      agent       mod   patient      poss   speaking
+   women   73974814   5500315  14391848  42411955  217545656
+     men  143781032  10308858  28125375  71055384  431406913
+
+Comparison of roles between women & men in the 19th Century
+-----------------------------------------------------------
+  gender      agent       mod   patient      poss   speaking
+   women    8399431    742917   2194462   6346372   48261009
+     men   13626697   1150889   3599584   8641931   82765054
+
+Comparison of roles between women & men in the 20th Century
+-----------------------------------------------------------
+  gender      agent       mod   patient      poss   speaking
+   women   55849823   4094726  10465803  30623758  149941769
+     men  112737629   7965794  21310073  54026334  311410853
+
+Comparison of roles between women & men in a given item (dul1.ark+=13960=t9f48pv82)
+-----------------------------------------------------------------------------------
+  gender      agent       mod   patient      poss   speaking
+   women         24         0        14        25          0
+     men        321        28       134       307        754
+
