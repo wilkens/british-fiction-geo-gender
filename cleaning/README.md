@@ -130,14 +130,14 @@ Once you have articulated the need to so some normalization, and after you have 
 
 In this particular case, the datasets have been saved in a database format called [SQLite](https://sqlite.org/). [2] SQLite is a small, cross-platform, and robust relational database application. SQLite implements a standards-compliant dialect of the Structured Query Langauge (SQL). Using SQL it is almost trivial to find/replace values in a database table. For example, after installing SQLite and using it to open bibliographics.db, the following statement can be used to normalize an author name:
 
-   UPDATE bibliographics SET author = 'James, G. P. R.' WHERE author LIKE '%James, G. P. R%';
+`UPDATE bibliographics SET author = 'James, G. P. R.' WHERE author LIKE '%James, G. P. R%';`
 
 Similarly, if you wanted to normalize the values of white across the geographics database, then you would: 1) use SQLite to open geographics.db and then 2) issue the following two statements:
 
 `UPDATE geographics SET white = 'white' WHERE white = 'White';`   
 `UPDATE geographics SET white = 'unknown' WHERE white = '';`
    
-SQL works with surgical precision, and you might need a kinder, gentler tool.
+SQL works with surgical precision, but you might need a kinder, gentler tool.
 
 [OpenRefine](http://openrefine.org) is an alternative to spreadsheets or database applications. [3] It was originally created at Google and subsequently released as open source software. Its primary purpurpose is to read delimited data, enable a person to search &amp; browse the data, manually as well as programmatically normalize it, and save the result. OpenRefine is made for exactly the sorts of things needed here, but it is not really able to open the whole of the bibliographics, geographics, nor genders datasets. The data sets are too large.
 
