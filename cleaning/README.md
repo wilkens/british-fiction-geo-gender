@@ -124,20 +124,34 @@ Data with null values probably needs to be given values, especially if values ex
 
 Like above, normalizing inconsistently formatted data can be done manually or programmatically. Through simple observation a person can see how James's name might be changed throughout the database to "James, G. P. R." But determining what names to change and how to change them is a daunting task. After all, there are more than 41,000 distinct names in the bibliographics data set. Yikes!
 
-
 Thanks to decades old algorithms, computers can be used to automate this sort of normalization. A good example is the [Levenshtein algorithm](https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance). Levenshtein calculates a "editing" distance between two strings and then compares those distances to determine a "correct" value. If zero typographical edits exist between two strings, then the strings are considered equal. If one typographical edit exists between two strings, then the strings are deemed further "apart". After many strings are compared to many other strings, it is possible to group the distances and determine which string is correct. Levenshtein was a Soviet mathematician who articulated the algorithm in 1965. The algorithm has been implemented in at least three dozen programming languages. [1]
+
+Once you have articulated the need to so some normalization, and after you have decided what values you want to change, you then need to do the actual editing. The way one does this work depends on the format of the data. If the data is in some delimited format (such as comma-separated values or tab-delimited values), and if the data is less than a few hundred rows long and a few dozen columns wide, then it is usually feasible to use something like a spreadsheet application to read, edit, and re-save the data. If the data is in a delimited format, but the data is larger than a few hundred rows or a few dozen columns, then using some sort of database or programming language is in order. If the data is formatted in something like an extensible mark-up language (XML) file or Javascript Object Notation (JSON) file, then the editing process will most definitely be through a programming language, and just about any one (Python, R, Perl, C, etc.) will do.
+
+In this particular case, the datasets have been saved in a database format called [SQLite](https://sqlite.org/). [2] SQLite is a small, cross-platform, and robust relational database application. SQLite implements a standards-compliant dialect of the Structured Query Langauge (SQL). Using SQL it is almost trivial to find/replace values in a database table. For example, after installing SQLite and using it to open bibliographics.db, the following statement can be used to normalize an author name:
+
+   UPDATE bibliographics SET author = 'James, G. P. R.' WHERE author LIKE '%James, G. P. R%';
+
+Similarly, if you wanted to normalize the values of white across the geographics database, then you would: 1) use SQLite to open geographics.db and then 2) issue the following two statements:
+
+   UPDATE geographics SET white = 'white' WHERE white = 'White';
+   UPDATE geographics SET white = 'unknown' WHERE white = '';
+   
+SQL works with surgical precision, and you might need a kinder, gentler tool.
+
+[OpenRefine](http://openrefine.org) is an alternative to spreadsheets or database applications. [3] It was originally created at Google and subsequently released as open source software. Its primary purpurpose is to read delimited data, enable a person to search &amp; browse the data, manually as well as programmatically normalize it, and save the result. OpenRefine is made for exactly the sorts of things needed here, but it is not really able to open the whole of the bibliographics, geographics, nor genders datasets. The data sets are too large.
+
+
 
 
 ## Links
 
-[1] Levenshtein algorithm - https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance
-
-
-
-
+[1] Levenshtein algorithm - https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance   
+[2] SQLite - https://sqlite.org/  
+[3] OpenRefine - http://openrefine.org/
 
 
 
 ---  
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;   
-February 5, 2019
+February 7, 2019
