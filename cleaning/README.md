@@ -141,6 +141,17 @@ SQL works with surgical precision, but you might need a kinder, gentler tool.
 
 [OpenRefine](http://openrefine.org) is an alternative to spreadsheets or database applications. [3] It was originally created at Google and subsequently released as open source software. Its primary purpurpose is to read delimited data, enable a person to search &amp; browse the data, manually as well as programmatically normalize it, and save the result. OpenRefine is made for exactly the sorts of things needed here, but it is not really able to open the whole of the bibliographics, geographics, nor genders datasets. The data sets are too large.
 
+On the other hand, it is quite possible you will not be needing the whole of each dataset. Instead, your research question maybe limited to a set of gives years, locations, genders, etc. If this is the case, then one need to extract a subset of the data from the whole data, possibly normalize it, and then do the analysis. As an example, four datasets have been created for you: 1) london.csv, 2) paris.csv, 3) new-york.csv, and 4) rome.csv. Each of these subsets was created using SQLite and the following commands:
+
+`.mode csv`
+`.headers on`
+`.output london.csv`
+`SELECT * FROM geographics`
+`WHERE formatted_address IS 'London, UK'`
+`  AND ( pub_date > 1849 AND pub_date < 1900 )`
+`  AND author > '';`
+
+
 
 ## Links
 
