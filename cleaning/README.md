@@ -147,9 +147,12 @@ On the other hand, it is quite possible you will not be needing the whole of eac
 `.headers on`   
 `.output london.csv`   
 `SELECT * FROM geographics`   
-`WHERE formatted_address IS 'London, UK' AND ( pub_date > 1849 AND pub_date < 1900 ) AND author > '';`
+`WHERE formatted_address IS 'London, UK'`  
+`AND ( pub_date > 1849 AND pub_date < 1900 ) AND author > '';`
 
+In other words, create a comma-separated file named london.csv, and include everything in the file where the address is London and published in the last half of the 19th Century and has an author value.
 
+Each of the resulting files are small enough to be imported into a spreadsheet, but instead, open them up in OpenRefine. 
 
 ## Links
 
