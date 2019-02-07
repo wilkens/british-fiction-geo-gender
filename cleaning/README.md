@@ -134,14 +134,12 @@ In this particular case, the datasets have been saved in a database format calle
 
 Similarly, if you wanted to normalize the values of white across the geographics database, then you would: 1) use SQLite to open geographics.db and then 2) issue the following two statements:
 
-   UPDATE geographics SET white = 'white' WHERE white = 'White';
-   UPDATE geographics SET white = 'unknown' WHERE white = '';
+`UPDATE geographics SET white = 'white' WHERE white = 'White';`   
+`UPDATE geographics SET white = 'unknown' WHERE white = '';`
    
 SQL works with surgical precision, and you might need a kinder, gentler tool.
 
 [OpenRefine](http://openrefine.org) is an alternative to spreadsheets or database applications. [3] It was originally created at Google and subsequently released as open source software. Its primary purpurpose is to read delimited data, enable a person to search &amp; browse the data, manually as well as programmatically normalize it, and save the result. OpenRefine is made for exactly the sorts of things needed here, but it is not really able to open the whole of the bibliographics, geographics, nor genders datasets. The data sets are too large.
-
-
 
 
 ## Links
