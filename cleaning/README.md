@@ -141,7 +141,7 @@ SQL works with surgical precision, but you might need a kinder, gentler tool.
 
 [OpenRefine](http://openrefine.org) is an alternative to spreadsheets or database applications. [3] It was originally created at Google and subsequently released as open source software. Its primary purpurpose is to read delimited data, enable a person to search &amp; browse the data, manually as well as programmatically normalize it, and save the result. OpenRefine is made for exactly the sorts of things needed here, but it is not really able to open the whole of the bibliographics, geographics, nor genders datasets. The data sets are too large.
 
-On the other hand, it is quite possible you will not be needing the whole of each dataset. Instead, your research question maybe limited to a set of gives years, locations, genders, etc. If this is the case, then one need to extract a subset of the data from the whole data, possibly normalize it, and then do the analysis. As an example, four datasets have been created for you: 1) [london.csv](./london.csv), 2) [paris.csv](./paris.csv), 3) [new-york.csv](./new-york.csv), and 4) [rome.csv](./rome.csv). Each of these subsets was created using SQLite and the following commands:
+On the other hand, it is quite possible you will not be needing the whole of each dataset. Instead, your research question maybe limited to a set of gives years, locations, genders, etc. If this is the case, then one need to extract a subset of the data from the whole data, possibly normalize it, and then do the analysis. As an example, four datasets have been created for you: 1) [london.csv](./london.csv), 2) [paris.csv](./paris.csv), 3) [new-york.csv](./new-york.csv), and 4) [rome.csv](./rome.csv). Each of these subsets was created using SQLite and versions of the following commands:
 
 `.mode csv`   
 `.headers on`   
@@ -152,7 +152,19 @@ On the other hand, it is quite possible you will not be needing the whole of eac
 
 In other words, create a comma-separated file named london.csv, and include everything in the file where the address is London and published in the last half of the 19th Century and has an author value.
 
-Each of the resulting files are small enough to be imported into a spreadsheet, but instead, open them up in OpenRefine. Use OpenRefine's 
+Each of the resulting files are small enough to be imported into a spreadsheet, but instead, open them up in OpenRefine. There are plenty of OpenRefine tutorials on the Web, but here is the tiniest of instructions:
+
+   1. Launch OpenRefine
+   2. Create a new project
+   3. Select one of the comma-separated value files
+   4. Accept the default importing options
+   5. Create text facets based on author names
+   6. Cluster the results to normalize the results
+   7. Clear the facets
+   8. Convert numeric columns to... numeric values (not string)
+   9. Create number facets based on years, occurrences, etc. 
+
+Through this process you will both normalize your data, become familiar with it, and ultimately create a small, manageable data set for further study.
 
 ## Links
 
