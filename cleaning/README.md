@@ -173,8 +173,6 @@ Through this process you will both normalize your data, become familiar with it,
 [2] SQLite - https://sqlite.org/  
 [3] OpenRefine - http://openrefine.org/
 
-
-
 ---  
 Eric Lease Morgan &lt;emorgan@nd.edu&gt;   
 February 7, 2019
