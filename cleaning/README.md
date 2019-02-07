@@ -147,9 +147,7 @@ On the other hand, it is quite possible you will not be needing the whole of eac
 `.headers on`   
 `.output london.csv`   
 `SELECT * FROM geographics`   
-`WHERE formatted_address IS 'London, UK'`   
-`  AND ( pub_date > 1849 AND pub_date < 1900 )`   
-`  AND author > '';`
+`WHERE formatted_address IS 'London, UK' AND ( pub_date > 1849 AND pub_date < 1900 ) AND author > '';`
 
 
 
